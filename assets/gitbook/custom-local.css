@@ -4,7 +4,7 @@
  *   these get simply added to the ones already active in the layout.
  */
 
-/* Giao diện GitBook tùy chỉnh cho tomoi.vn */
+/* Cải thiện giao diện GitBook */
 
 /* Màu chủ đạo và biến */
 :root {
@@ -14,42 +14,35 @@
   --text-color: #333333;
   --text-light-color: #6b7280;
   --background-color: #ffffff;
-  --sidebar-bg: #f8f8f8;
+  --sidebar-bg: #f8fafc;
   --hover-bg: #fff1f1;
   --border-color: #e5e7eb;
   --header-height: 60px;
-  --radius: 4px;
+  --radius: 6px;
   --box-shadow: 0 2px 8px rgba(223, 38, 38, 0.08);
+  --primary-color-rgb: 223, 38, 38;
 }
 
-/* Kiểu dáng chung */
+/* Tùy chỉnh phông chữ */
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
   color: var(--text-color);
   line-height: 1.6;
   font-size: 16px;
   background-color: var(--background-color);
 }
 
-/* Logo ToMoi */
-.tomoi-logo {
-  font-weight: 700;
-  color: var(--primary-color);
-  font-size: 1.4rem;
-  position: relative;
-  padding-left: 6px;
+/* Hỗ trợ các font từ dropdown */
+.font-family-0 {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
 }
 
-.tomoi-logo:before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  left: -5px;
-  top: 50%;
-  transform: translateY(-50%);
+.font-family-1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.font-family-2 {
+  font-family: "Georgia", serif !important;
 }
 
 /* Header */
@@ -64,12 +57,10 @@ body {
   font-weight: 600 !important;
   font-size: 1.25rem !important;
   opacity: 1 !important;
-  color: var(--primary-color) !important;
 }
 
 .book-header .btn {
   color: var(--text-light-color) !important;
-  transition: all 0.2s ease;
 }
 
 .book-header .btn:hover {
@@ -82,20 +73,11 @@ body {
   border-right: 1px solid var(--border-color);
 }
 
-.book-summary:before {
-  content: '';
-  display: block;
-  height: 4px;
-  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-  margin-bottom: 10px;
-}
-
 .book-summary ul.summary li a {
-  padding: 10px 15px;
+  padding: 12px 15px;
   color: var(--text-color);
   font-weight: 500;
   transition: all 0.2s ease;
-  border-radius: 0;
 }
 
 .book-summary ul.summary li a:hover {
@@ -105,7 +87,7 @@ body {
 }
 
 .book-summary ul.summary li.active > a {
-  color: var(--primary-color);
+  color: #333333;
   font-weight: 600;
   border-left: 3px solid var(--primary-color);
   background-color: rgba(223, 38, 38, 0.05);
@@ -139,7 +121,6 @@ body {
 #book-search-input input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(223, 38, 38, 0.1);
-  outline: none;
 }
 
 /* Nội dung chính */
@@ -161,118 +142,65 @@ body {
 
 .markdown-section h1 {
   font-size: 2em;
-  color: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.3em;
 }
 
 .markdown-section h2 {
-  font-size: 1.5em;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.3em;
-}
-
-.markdown-section h3 {
-  font-size: 1.3em;
-}
-
-.markdown-section h4 {
-  font-size: 1.1em;
+  font-size: 1.75em;
 }
 
 .markdown-section a {
   color: var(--primary-color);
-  text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .markdown-section a:hover {
   text-decoration: underline;
-  color: var(--secondary-color);
+}
+
+/* Code blocks */
+.markdown-section pre {
+  background-color: #f8fafc;
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--border-color);
 }
 
 .markdown-section code {
-  background-color: #f5f5f5;
-  border-radius: var(--radius);
-  padding: 3px 6px;
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.9em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
-.markdown-section pre {
-  background-color: #2d2d2d;
-  border-radius: var(--radius);
-  padding: 16px;
+/* Bảng */
+.markdown-section table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
   overflow: auto;
 }
 
-.markdown-section pre code {
-  background-color: transparent;
-  color: #f8f8f2;
-  padding: 0;
-}
-
-.markdown-section strong {
-  font-weight: 600;
-}
-
-.markdown-section em {
-  font-style: italic;
-}
-
-.markdown-section ul, 
-.markdown-section ol {
-  padding-left: 2em;
-}
-
-.markdown-section ul {
-  list-style-type: disc;
-}
-
-.markdown-section ol {
-  list-style-type: decimal;
-}
-
-.markdown-section li {
-  margin: 0.5em 0;
-}
-
-.markdown-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1em 0;
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
 }
 
 .markdown-section table th {
-  background-color: #f8f8f8;
   font-weight: 600;
-  text-align: left;
-  padding: 10px;
-  border-bottom: 2px solid var(--border-color);
+  background-color: #f1f5f9;
 }
 
-.markdown-section table td {
-  padding: 10px;
-  border-bottom: 1px solid var(--border-color);
+.markdown-section table tr:nth-child(2n) {
+  background-color: #f8fafc;
 }
 
-.markdown-section table tr:nth-child(even) {
-  background-color: #fafafa;
-}
-
-.markdown-section img {
-  max-width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--box-shadow);
-}
-
+/* Blockquotes */
 .markdown-section blockquote {
   border-left: 4px solid var(--accent-color);
   color: var(--text-light-color);
   padding: 10px 15px;
   background-color: rgba(223, 38, 38, 0.05);
   border-radius: 0 var(--radius) var(--radius) 0;
-  margin: 1.5em 0;
 }
 
 /* Tip, warning, danger blocks */
@@ -291,40 +219,20 @@ body {
 }
 
 .markdown-section blockquote.block-danger {
-  border-color: var(--primary-color);
-  background-color: rgba(223, 38, 38, 0.1);
-  color: var(--primary-color);
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
   border-radius: var(--radius);
 }
 
 /* Buttons */
 .navigation {
   color: var(--text-light-color) !important;
-  transition: all 0.3s ease;
-  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .navigation:hover {
   color: var(--primary-color) !important;
-}
-
-/* Back to top button */
-.back-to-top-button {
-  background-color: var(--primary-color) !important;
-  color: white !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 2px 10px rgba(223, 38, 38, 0.3) !important;
-  transition: all 0.3s ease !important;
-}
-
-.back-to-top-button:hover {
-  background-color: var(--secondary-color) !important;
-  transform: translateY(-3px) !important;
 }
 
 /* Scrollbar */
@@ -338,22 +246,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(223, 38, 38, 0.3);
+  background-color: rgba(100, 116, 139, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(223, 38, 38, 0.5);
-}
-
-/* Page loading animation */
-.book {
-  animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  background-color: rgba(100, 116, 139, 0.7);
 }
 
 /* Dark mode support */
@@ -363,203 +261,15 @@ body {
   --accent-color: #ff7878;
   --text-color: #e5e7eb;
   --text-light-color: #9ca3af;
-  --background-color: #1a1a1a;
-  --sidebar-bg: #252525;
-  --hover-bg: #332020;
-  --border-color: #333333;
+  --background-color: #1e293b;
+  --sidebar-bg: #0f172a;
+  --hover-bg: #1e293b;
+  --border-color: #334155;
 }
 
-.book.color-theme-1 {
-  --primary-color: #c62020;
-  --secondary-color: #a81b1b;
-  --accent-color: #e04848;
-}
-
-/* Responsive adjustments */
+/* Mobile responsive */
 @media (max-width: 1240px) {
   .book-body .body-inner {
-    padding: 0 15px;
+    margin-top: var(--header-height);
   }
-  
-  .markdown-section {
-    padding: 20px 15px;
-  }
-  
-  .tomoi-logo {
-    font-size: 1.2rem;
-  }
-}
-
-/* Mobile improvements */
-@media (max-width: 600px) {
-  .markdown-section h1 {
-    font-size: 1.8em;
-  }
-  
-  .markdown-section h2 {
-    font-size: 1.5em;
-  }
-  
-  .book-header h1 {
-    font-size: 1.1rem !important;
-  }
-}
-
-/* Add "Top" decorator to certain elements for better visual hierarchy */
-.book-summary ul.summary > li:first-child > a:before,
-.markdown-section h1:before {
-  content: '';
-  display: inline-block;
-  width: 3px;
-  height: 3px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-/* Custom Elements for TomOi.vn */
-.badge {
-  display: inline-block;
-  padding: 0.25em 0.6em;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.badge-primary {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.badge-secondary {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-.feature-box {
-  display: flex;
-  margin: 1.5rem 0;
-  padding: 1rem;
-  border-radius: var(--radius);
-  background: #fbfbfb;
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
-}
-
-.feature-box:hover {
-  box-shadow: var(--box-shadow);
-  transform: translateY(-2px);
-}
-
-.feature-icon {
-  flex: 0 0 40px;
-  color: var(--primary-color);
-  margin-right: 1rem;
-}
-
-.feature-content {
-  flex: 1;
-}
-
-.feature-content h4 {
-  margin-top: 0;
-  color: var(--primary-color);
-}
-
-/* Cards */
-.card {
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  margin: 1rem 0;
-  background-color: white;
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(223, 38, 38, 0.15);
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 0;
-  color: var(--primary-color);
-}
-
-/* Cta buttons */
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  text-decoration: none !important;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white !important;
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-  color: white !important;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary-color);
-  color: white !important;
-}
-
-/* Timeline */
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 2rem;
-}
-
-.timeline:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: var(--primary-color);
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-.timeline-item:before {
-  content: '';
-  position: absolute;
-  left: -2.25rem;
-  top: 0.25rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-}
-
-.timeline-title {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
 }

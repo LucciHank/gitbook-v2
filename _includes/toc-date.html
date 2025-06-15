@@ -1,4 +1,4 @@
-<div class="book-summary">
+<div class="book-summary" id="sidebar">
     <div id="book-search-input" role="search">
         <input type="text" placeholder="Tìm kiếm" />
     </div>
@@ -9,14 +9,11 @@
                 <img src="{{ site.baseurl }}/assets/gitbook/images/logo.png" alt="Logo" class="brand-logo">
                 <span class="brand-text">{{ site.title }}</span>
             </a>
+            <button id="sidebar-close" class="sidebar-toggle">
+                <i class="fa fa-times"></i>
+            </button>
         </div>
         <ul class="summary">
-            <li>
-                <a href="{{ site.baseurl }}/" class="custom-link">
-                    <i class="fa fa-home" aria-hidden="true"></i> Trang chủ
-                </a>
-            </li>
-
             <li class="divider"></li>
             <li class="header">Hướng dẫn sử dụng tài liệu</li>
             <li class="chapter{% if page.url == '/' %} active{% endif %}" data-path="{{ site.baseurl }}/">
@@ -30,35 +27,35 @@
             <li class="chapter{% if page.url == '/gioi-thieu/gioi-thieu-ve-tomoivn/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/gioi-thieu-ve-tomoivn/">
                     <i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu về TomOi.vn
-                </a>
-            </li>
+                            </a>
+                        </li>
             <li class="chapter{% if page.url == '/gioi-thieu/ly-do-mua-hang/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/ly-do-mua-hang/">
                     <i class="fa fa-check-circle" aria-hidden="true"></i> Lý do nên mua hàng tại TomOi.vn
-                </a>
-            </li>
+                            </a>
+                        </li>
             <li class="chapter{% if page.url == '/gioi-thieu/nen-tang-chinh-thuc/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/nen-tang-chinh-thuc/">
                     <i class="fa fa-globe" aria-hidden="true"></i> Các nền tảng chính thức
-                </a>
-            </li>
+                                </a>
+                            </li>
             <li class="chapter{% if page.url == '/gioi-thieu/tong-quan-website/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/tong-quan-website/">
                     <i class="fa fa-desktop" aria-hidden="true"></i> Tổng quan website
-                </a>
-            </li>
+                                </a>
+                            </li>
             <li class="chapter{% if page.url == '/gioi-thieu/dieu-khoan-dich-vu/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/dieu-khoan-dich-vu/">
                     <i class="fa fa-file-text" aria-hidden="true"></i> Điều khoản dịch vụ
-                </a>
-            </li>
+                                </a>
+                            </li>
             <li class="chapter{% if page.url == '/gioi-thieu/chinh-sach-bao-mat/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/gioi-thieu/chinh-sach-bao-mat/">
                     <i class="fa fa-shield" aria-hidden="true"></i> Chính sách bảo mật
-                </a>
-            </li>
+                                </a>
+                            </li>
 
-            <li class="divider"></li>
+                <li class="divider"></li>
             <li class="header">Hướng dẫn mua hàng</li>
             <li class="chapter{% if page.url == '/huong-dan-mua-hang/quan-ly-tai-khoan/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/huong-dan-mua-hang/quan-ly-tai-khoan/">
@@ -78,30 +75,48 @@
             <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/">
                     <i class="fa fa-history" aria-hidden="true"></i> Tra cứu lịch sử nạp tiền
-                </a>
-            </li>
+                    </a>
+                </li>
             <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/">
                     <i class="fa fa-list-alt" aria-hidden="true"></i> Tra cứu lịch sử đơn hàng
-                </a>
-            </li>
+                    </a>
+                </li>
 
             <li class="divider"></li>
             <li class="header">Hướng dẫn cài đặt và sử dụng</li>
             <li class="chapter{% if page.url == '/huong-dan-cai-dat/' %} active{% endif %}">
                 <a href="{{ site.baseurl }}/huong-dan-cai-dat/">
                     <i class="fa fa-cog" aria-hidden="true"></i> Hướng dẫn cài đặt và sử dụng sản phẩm
-                </a>
-            </li>
+                    </a>
+                </li>
         </ul>
     </nav>
 </div>
+
+<!-- Mobile Navigation Toggle -->
+<div class="book-header-mobile">
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="header-title">
+        {% if page.title %}
+            {{ page.title | escape }}
+        {% else %}
+            {{ site.title | escape }}
+        {% endif %}
+    </div>
+</div>
+
+<!-- Overlay for mobile -->
+<div id="sidebar-overlay"></div>
 
 <style>
     #sidebar-brand {
         padding: 15px 15px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border-bottom: 1px solid var(--border-color);
         margin-bottom: 10px;
     }
@@ -138,4 +153,163 @@
     .book-summary ul.summary li.active > a i {
         color: var(--primary-color);
     }
+    
+    /* Mobile navigation styles */
+    .book-header-mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        padding: 0 15px;
+        background-color: var(--background-color);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        align-items: center;
+    }
+    
+    .header-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--text-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        flex-grow: 1;
+    }
+    
+    .sidebar-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--text-color);
+        padding: 5px;
+        display: none;
+    }
+    
+    #sidebar-toggle {
+        display: none;
+        margin-right: 10px;
+    }
+    
+    #sidebar-close {
+        display: none;
+    }
+    
+    #sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 15;
+    }
+    
+    /* Make header tabs larger */
+    .book-summary ul.summary li.header {
+        padding: 10px 15px 5px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        letter-spacing: 0.5px;
+    }
+    
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+        .book-header-mobile {
+            display: flex;
+        }
+        
+        .book-body {
+            margin-top: 50px;
+        }
+        
+        .book-summary {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 20;
+            width: 280px;
+            left: -280px;
+            transition: transform 0.3s ease;
+        }
+        
+        .book-summary.open {
+            transform: translateX(280px);
+        }
+        
+        #sidebar-toggle, 
+        #sidebar-close {
+            display: block;
+        }
+        
+        .book-summary {
+            overflow-y: auto;
+        }
+    }
 </style>
+
+<script>
+// Add this script to handle mobile navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const overlay = document.getElementById('sidebar-overlay');
+    
+    function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent body scrolling
+    }
+    
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.style.display = 'none';
+        document.body.style.overflow = ''; // Restore body scrolling
+    }
+    
+    if(sidebarToggle) {
+        sidebarToggle.addEventListener('click', function() {
+            openSidebar();
+        });
+    }
+    
+    if(sidebarClose) {
+        sidebarClose.addEventListener('click', function() {
+            closeSidebar();
+        });
+    }
+    
+    if(overlay) {
+        overlay.addEventListener('click', function() {
+            closeSidebar();
+        });
+    }
+    
+    // Close sidebar when a menu item is clicked (on mobile)
+    const menuItems = document.querySelectorAll('.summary li a');
+    menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                setTimeout(function() {
+                    closeSidebar();
+                }, 300); // Small delay to ensure the link is followed
+            }
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeSidebar();
+        }
+    });
+});
+</script>

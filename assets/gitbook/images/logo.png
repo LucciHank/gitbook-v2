@@ -1,1 +1,8 @@
-/* Đây là file binary, không thể chỉnh sửa trực tiếp qua text editor */ 
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" fill="none">
+  <rect width="160" height="40" fill="transparent"/>
+  <g transform="translate(10, 10)">
+    <rect width="30" height="30" rx="4" fill="#df2626"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">T</text>
+    <text x="45" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#df2626">TomOi.vn</text>
+  </g>
+</svg> 

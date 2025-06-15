@@ -1,12 +1,13 @@
 [build]
-  command = "bundle exec jekyll build"
+  command = "jekyll build"
   publish = "_site"
 
 [build.environment]
-  RUBY_VERSION = "3.4.3"
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.2.2"
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
+  package = "@netlify/plugin-sitemap"
 
 # HTTP response headers
 [[headers]]
@@ -16,7 +17,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self' https://www.google-analytics.com; frame-src 'self'; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:;"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # Redirect default Netlify subdomain to primary domain
