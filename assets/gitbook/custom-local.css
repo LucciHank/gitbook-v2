@@ -161,37 +161,23 @@ body {
 
 .markdown-section h1 {
   font-size: 2em;
+  color: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.3em;
-  color: var(--primary-color);
 }
 
 .markdown-section h2 {
-  font-size: 1.75em;
-  color: #333;
-  position: relative;
-  padding-left: 0.5em;
-}
-
-.markdown-section h2:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: var(--primary-color);
-  border-radius: 3px;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3em;
 }
 
 .markdown-section h3 {
-  font-size: 1.4em;
-  color: #444;
+  font-size: 1.3em;
 }
 
 .markdown-section h4 {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.1em;
 }
 
 .markdown-section a {
@@ -205,56 +191,81 @@ body {
   color: var(--secondary-color);
 }
 
-/* Code blocks */
+.markdown-section code {
+  background-color: #f5f5f5;
+  border-radius: var(--radius);
+  padding: 3px 6px;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+
 .markdown-section pre {
-  background-color: #f8f8f8;
+  background-color: #2d2d2d;
   border-radius: var(--radius);
   padding: 16px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: auto;
 }
 
-.markdown-section code {
-  border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  background-color: rgba(223, 38, 38, 0.05);
-  color: var(--primary-color);
-  padding: 0.2em 0.4em;
-}
-
-pre .markdown-section code {
+.markdown-section pre code {
   background-color: transparent;
-  color: inherit;
+  color: #f8f8f2;
   padding: 0;
 }
 
-/* Bảng */
-.markdown-section table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1em 0;
-  overflow: auto;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.markdown-section strong {
+  font-weight: 600;
 }
 
-.markdown-section table th,
-.markdown-section table td {
-  border: 1px solid var(--border-color);
-  padding: 10px 12px;
+.markdown-section em {
+  font-style: italic;
+}
+
+.markdown-section ul, 
+.markdown-section ol {
+  padding-left: 2em;
+}
+
+.markdown-section ul {
+  list-style-type: disc;
+}
+
+.markdown-section ol {
+  list-style-type: decimal;
+}
+
+.markdown-section li {
+  margin: 0.5em 0;
+}
+
+.markdown-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
 }
 
 .markdown-section table th {
-  font-weight: 600;
-  background-color: rgba(223, 38, 38, 0.05);
-  color: var(--primary-color);
-}
-
-.markdown-section table tr:nth-child(2n) {
   background-color: #f8f8f8;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid var(--border-color);
 }
 
-/* Blockquotes */
+.markdown-section table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.markdown-section table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.markdown-section img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+
 .markdown-section blockquote {
   border-left: 4px solid var(--accent-color);
   color: var(--text-light-color);
@@ -405,4 +416,150 @@ pre .markdown-section code {
   border-radius: 50%;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* Custom Elements for TomOi.vn */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.feature-box {
+  display: flex;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: #fbfbfb;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  box-shadow: var(--box-shadow);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  flex: 0 0 40px;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* Cards */
+.card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(223, 38, 38, 0.15);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* Cta buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: white !important;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: -2.25rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.timeline-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }

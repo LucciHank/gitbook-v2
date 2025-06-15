@@ -1,11 +1,10 @@
 # Configurations
-title:            Tài liệu ToMoi
+title: TomOi.vn - Tài liệu hướng dẫn
 longtitle:        Tài liệu ToMoi - Nền tảng học tập trực tuyến hàng đầu
-author:           ToMoi Team
-email:            support@tomoi.vn
-description: >
-  Trang tài liệu chính thức của ToMoi với thiết kế hiện đại và thân thiện người dùng.
-  Hướng dẫn đầy đủ về cách sử dụng nền tảng học tập trực tuyến ToMoi.
+author:
+  name: TomOi.vn
+  email: support@tomoi.vn
+description: Tài liệu hướng dẫn sử dụng dịch vụ tại TomOi.vn
 
 version:          1.0
 gitbook_version:  3.2.3
@@ -78,6 +77,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - node_modules
+  - .idea/
+  - .gitignore
 
 collections:
   pages:
@@ -101,6 +103,44 @@ regenerate:       true
 plugins:
   - jekyll-feed
   - jekyll-readme-index
-  - jekyll-seo-tag 
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
+
+# set primary color
+primary_color: "#df2626"
+
+# Navigation
+navigation:
+  - name: Hướng dẫn nhanh
+    link: /
+    children: false
+  - name: Giới thiệu
+    children:
+      - name: Giới thiệu về TomOi.vn
+        link: /gioi-thieu/gioi-thieu-ve-tomoivn/
+      - name: Lý do nên mua hàng
+        link: /gioi-thieu/ly-do-mua-hang/
+      - name: Các nền tảng chính thức
+        link: /gioi-thieu/nen-tang-chinh-thuc/
+      - name: Tổng quan website
+        link: /gioi-thieu/tong-quan-website/
+      - name: Điều khoản dịch vụ
+        link: /gioi-thieu/dieu-khoan-dich-vu/
+      - name: Chính sách bảo mật
+        link: /gioi-thieu/chinh-sach-bao-mat/
+  - name: Hướng dẫn mua hàng
+    children:
+      - name: Quản lý tài khoản
+        link: /huong-dan-mua-hang/quan-ly-tai-khoan/
+  - name: Hướng dẫn cài đặt
+    link: /huong-dan-cai-dat/
+    children: false
+  - name: Liên kết hữu ích
+    children:
+      - name: Website chính thức
+        link: https://tomoi.vn
+      - name: Facebook
+        link: https://facebook.com/tomoi.vn
+      - name: Zalo
+        link: https://zalo.me/tomoi

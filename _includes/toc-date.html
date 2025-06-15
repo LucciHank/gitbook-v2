@@ -17,87 +17,82 @@
                 </a>
             </li>
 
-            {% if site.toc.enabled %}
-                {% assign reversed_posts = site.posts | reverse %}
+            <li class="divider"></li>
+            <li class="header">Hướng dẫn sử dụng tài liệu</li>
+            <li class="chapter{% if page.url == '/' %} active{% endif %}" data-path="{{ site.baseurl }}/">
+                <a href="{{ site.baseurl }}/">
+                    <i class="fa fa-book" aria-hidden="true"></i> Hướng dẫn nhanh
+                </a>
+            </li>
 
-                {% for post in reversed_posts %}
-                    {% if page.url == post.url %}
-                        <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ post.url }}">
-                            <a href="#!">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title | escape }}
-                            </a>
-                        </li>
-                    {% else %}
-                        <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ post.url }}">
-                            <a href="{{ site.baseurl }}{{ post.url }}">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title | escape }}
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
+            <li class="divider"></li>
+            <li class="header">Giới thiệu</li>
+            <li class="chapter{% if page.url == '/gioi-thieu/gioi-thieu-ve-tomoivn/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/gioi-thieu-ve-tomoivn/">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu về TomOi.vn
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/gioi-thieu/ly-do-mua-hang/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/ly-do-mua-hang/">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i> Lý do nên mua hàng tại TomOi.vn
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/gioi-thieu/nen-tang-chinh-thuc/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/nen-tang-chinh-thuc/">
+                    <i class="fa fa-globe" aria-hidden="true"></i> Các nền tảng chính thức
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/gioi-thieu/tong-quan-website/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/tong-quan-website/">
+                    <i class="fa fa-desktop" aria-hidden="true"></i> Tổng quan website
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/gioi-thieu/dieu-khoan-dich-vu/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/dieu-khoan-dich-vu/">
+                    <i class="fa fa-file-text" aria-hidden="true"></i> Điều khoản dịch vụ
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/gioi-thieu/chinh-sach-bao-mat/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/gioi-thieu/chinh-sach-bao-mat/">
+                    <i class="fa fa-shield" aria-hidden="true"></i> Chính sách bảo mật
+                </a>
+            </li>
 
-                {% if site.pages %}
-                    <li class="divider"></li>
-                    <li class="header">Trang</li>
+            <li class="divider"></li>
+            <li class="header">Hướng dẫn mua hàng</li>
+            <li class="chapter{% if page.url == '/huong-dan-mua-hang/quan-ly-tai-khoan/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-mua-hang/quan-ly-tai-khoan/">
+                    <i class="fa fa-user" aria-hidden="true"></i> Quản lý tài khoản
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/huong-dan-mua-hang/huong-dan-nap-tien/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-mua-hang/huong-dan-nap-tien/">
+                    <i class="fa fa-money" aria-hidden="true"></i> Hướng dẫn nạp tiền
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/huong-dan-mua-hang/huong-dan-thanh-toan/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-mua-hang/huong-dan-thanh-toan/">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i> Hướng dẫn thanh toán
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/">
+                    <i class="fa fa-history" aria-hidden="true"></i> Tra cứu lịch sử nạp tiền
+                </a>
+            </li>
+            <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i> Tra cứu lịch sử đơn hàng
+                </a>
+            </li>
 
-                    {% assign sorted_pages = site.pages | sort: 'date' %}
-
-                    {% for page_item in sorted_pages %}
-                        {% if page.url == page_item.url %}
-                            <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ page_item.url }}">
-                                <a href="#!">
-                                    <i class="fa fa-bookmark" aria-hidden="true"></i> {{ page_item.title | escape }}
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ page_item.url }}">
-                                <a href="{{ site.baseurl }}{{ page_item.url }}">
-                                    <i class="fa fa-bookmark" aria-hidden="true"></i> {{ page_item.title | escape }}
-                                </a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-
-                {% if site.others %}
-                    <li class="divider"></li>
-                    <li class="header">Khác</li>
-
-                    {% for other_item in site.others %}
-                        {% if page.url == other_item.url %}
-                            <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ other_item.url }}">
-                                <a href="#!">
-                                    <i class="fa fa-file" aria-hidden="true"></i> {{ other_item.title | escape }}
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ other_item.url }}">
-                                <a href="{{ site.baseurl }}{{ other_item.url }}">
-                                    <i class="fa fa-file" aria-hidden="true"></i> {{ other_item.title | escape }}
-                                </a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-
-                <li class="divider"></li>
-                <li class="header">Liên kết hữu ích</li>
-                <li class="chapter">
-                    <a href="https://github.com/" target="_blank">
-                        <i class="fa fa-github" aria-hidden="true"></i> GitHub
-                    </a>
-                </li>
-                <li class="chapter">
-                    <a href="https://www.gitbook.com/" target="_blank">
-                        <i class="fa fa-book" aria-hidden="true"></i> GitBook
-                    </a>
-                </li>
-                <li class="chapter">
-                    <a href="https://jekyllrb.com/" target="_blank">
-                        <i class="fa fa-code" aria-hidden="true"></i> Jekyll
-                    </a>
-                </li>
-            {% endif %}
+            <li class="divider"></li>
+            <li class="header">Hướng dẫn cài đặt và sử dụng</li>
+            <li class="chapter{% if page.url == '/huong-dan-cai-dat/' %} active{% endif %}">
+                <a href="{{ site.baseurl }}/huong-dan-cai-dat/">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Hướng dẫn cài đặt và sử dụng sản phẩm
+                </a>
+            </li>
         </ul>
     </nav>
 </div>
