@@ -3,3 +3,259 @@
  * Its purpose is for users of the theme to be able to add css rules from a blank file
  *   these get simply added to the ones already active in the layout.
  */
+
+/* Cải thiện giao diện GitBook */
+
+/* Màu chủ đạo và biến */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #4f46e5;
+  --accent-color: #818cf8;
+  --text-color: #333333;
+  --text-light-color: #6b7280;
+  --background-color: #ffffff;
+  --sidebar-bg: #f8fafc;
+  --hover-bg: #f1f5f9;
+  --border-color: #e5e7eb;
+  --header-height: 60px;
+  --radius: 6px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Kiểu dáng chung */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: var(--background-color);
+}
+
+/* Header */
+.book-header {
+  height: var(--header-height) !important;
+  background-color: var(--background-color) !important;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+}
+
+.book-header h1 {
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  opacity: 1 !important;
+}
+
+.book-header .btn {
+  color: var(--text-light-color) !important;
+}
+
+.book-header .btn:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Sidebar */
+.book-summary {
+  background-color: var(--sidebar-bg) !important;
+  border-right: 1px solid var(--border-color);
+}
+
+.book-summary ul.summary li a {
+  padding: 12px 15px;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.book-summary ul.summary li a:hover {
+  background-color: var(--hover-bg);
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.book-summary ul.summary li.active > a {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-left: 3px solid var(--primary-color);
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.book-summary ul.summary li.header {
+  color: var(--text-light-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 20px 15px 10px 15px;
+  letter-spacing: 0.05em;
+}
+
+/* Nút tìm kiếm */
+#book-search-input {
+  padding: 12px;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
+}
+
+#book-search-input input {
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  transition: all 0.2s ease;
+}
+
+#book-search-input input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Nội dung chính */
+.markdown-section {
+  padding: 24px 30px;
+}
+
+.markdown-section h1, 
+.markdown-section h2, 
+.markdown-section h3, 
+.markdown-section h4, 
+.markdown-section h5, 
+.markdown-section h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  color: var(--text-color);
+}
+
+.markdown-section h1 {
+  font-size: 2em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3em;
+}
+
+.markdown-section h2 {
+  font-size: 1.75em;
+}
+
+.markdown-section a {
+  color: var(--primary-color);
+}
+
+.markdown-section a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+.markdown-section pre {
+  background-color: #f8fafc;
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.markdown-section code {
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* Bảng */
+.markdown-section table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  overflow: auto;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+}
+
+.markdown-section table th {
+  font-weight: 600;
+  background-color: #f1f5f9;
+}
+
+.markdown-section table tr:nth-child(2n) {
+  background-color: #f8fafc;
+}
+
+/* Blockquotes */
+.markdown-section blockquote {
+  border-left: 4px solid var(--accent-color);
+  color: var(--text-light-color);
+  padding: 10px 15px;
+  background-color: rgba(129, 140, 248, 0.1);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Tip, warning, danger blocks */
+.markdown-section blockquote.block-tip {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border-radius: var(--radius);
+}
+
+.markdown-section blockquote.block-warning {
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border-radius: var(--radius);
+}
+
+.markdown-section blockquote.block-danger {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-radius: var(--radius);
+}
+
+/* Buttons */
+.navigation {
+  color: var(--text-light-color) !important;
+  transition: all 0.2s ease;
+}
+
+.navigation:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.7);
+}
+
+/* Dark mode support */
+.book.color-theme-2 {
+  --primary-color: #818cf8;
+  --secondary-color: #6366f1;
+  --accent-color: #a5b4fc;
+  --text-color: #e5e7eb;
+  --text-light-color: #9ca3af;
+  --background-color: #1e293b;
+  --sidebar-bg: #0f172a;
+  --hover-bg: #1e293b;
+  --border-color: #334155;
+}
+
+/* Mobile responsive */
+@media (max-width: 1240px) {
+  .book-body .body-inner {
+    margin-top: var(--header-height);
+  }
+}

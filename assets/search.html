@@ -1,9 +1,85 @@
 ---
 layout: search-base
+title: Search
 ---
 
-<!-- Slightly Modified from _layouts/home.html -->
+{% include search.html %}
 
-<div id="book-search-input-inside" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+<style>
+    .search-results {
+        padding: 30px;
+        background-color: var(--background-color);
+        border-radius: var(--radius);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .search-results-title {
+        font-weight: 600 !important;
+        font-size: 1.5rem !important;
+        color: var(--primary-color) !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .search-results-item {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border-color);
+        transition: all 0.2s ease;
+    }
+    
+    .search-results-item:hover {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4);
+    }
+    
+    .search-results-item h3 {
+        margin-top: 0 !important;
+        font-size: 1.25rem;
+    }
+    
+    .search-results-item a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .search-results-item a:hover {
+        text-decoration: underline;
+    }
+    
+    .search-results-item p {
+        margin: 10px 0 0;
+        color: var(--text-light-color);
+        font-size: 0.9rem;
+    }
+    
+    .no-results {
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    .no-results p {
+        font-size: 1.1rem;
+        color: var(--text-light-color);
+    }
+    
+    .search-input-container {
+        margin-bottom: 30px;
+    }
+    
+    .search-input {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 16px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        box-sizing: border-box;
+        transition: border-color 0.2s ease;
+    }
+    
+    .search-input:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+</style>

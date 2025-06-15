@@ -1,119 +1,146 @@
 <div class="book-summary">
-    <script type="text/javascript">
-        // Fixes the page links scroll problem on both desktop and mobile browsers
-        function pageScrollToTop(element) {
-            // both mobile and non-mobile
-            $('div.body-inner').animate({scrollTop: 0});
-            $(element).parent().find('li>ul>li').removeClass('active');
-            return true;  // propagate
-        }
-        // Fixes the anchor links scroll problem on mobile browsers
-        function mobilePageScrollToAnchor(element) {
-            $(element).closest('li.chapter').find('ul>li').removeClass('active');
-            $(element).parent().addClass('active');
-            if ($(document).width() <= 1240) {
-                let target = $($(element).attr('href'));
-                if (target.length) {
-                    $('div.body-inner').animate({
-                        scrollTop: target.get(0).offsetTop,
-                    });
-                }
-            }
-            return true;
-        }
-    </script>
+    <div id="book-search-input" role="search">
+        <input type="text" placeholder="Tìm kiếm" />
+    </div>
 
     <nav role="navigation">
-        <div id="book-search-input" role="search">
-            <input type="text" placeholder="Type to search" />
-        </div>
-        <div id="book-search-input-link" role="search">
-            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
+        <div id="sidebar-brand">
+            <a href="{{ site.baseurl }}/" class="logo">
+                <img src="{{ site.baseurl }}/assets/gitbook/images/logo.png" alt="Logo" class="brand-logo">
+                <span class="brand-text">{{ site.title }}</span>
+            </a>
         </div>
         <ul class="summary">
-            {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
-            {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
-            {% endif %}
-                <a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
-                    {{ site.title | escape }}
+            <li>
+                <a href="{{ site.baseurl }}/" class="custom-link">
+                    <i class="fa fa-home" aria-hidden="true"></i> Trang chủ
                 </a>
-                {% if site.toc.enabled %}
-                    {% if site.toc.enabled_index %}
-                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                    {% endif %}
-                {% endif %}
             </li>
 
-            <li class="divider"></li>
+            {% if site.toc.enabled %}
+                {% assign reversed_posts = site.posts | reverse %}
 
-            {% if site.ordered_collections %}
-                {% for label in site.ordered_collections %}
-                    {% assign collection = site.collections | where: "label", label | first %}
-                    <!-- <p>{{ collection.label }}</p> -->
-                    {% if collection.output %}
-                        {% if collection.label == "posts" %}
-                            {% assign reversed_posts = site[collection.label] | reverse %}
-                        {% else %}
-                            {% assign reversed_posts = site[collection.label] %}
-                        {% endif %}
-
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                                    {% endif %}
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-
-                        {% if reversed_posts.size > 0 %}
-                            <li class="divider"></li>
-                        {% endif %}
+                {% for post in reversed_posts %}
+                    {% if page.url == post.url %}
+                        <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ post.url }}">
+                            <a href="#!">
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title | escape }}
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ post.url }}">
+                            <a href="{{ site.baseurl }}{{ post.url }}">
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title | escape }}
+                            </a>
+                        </li>
                     {% endif %}
                 {% endfor %}
-            {% else %}
-                {% for collection in site.collections %}
-                    <!-- <p>{{ collection.label }}</p> -->
-                    {% if collection.output %}
-                        {% if collection.label == "posts" %}
-                            {% assign reversed_posts = site[collection.label] | reverse %}
-                        {% else %}
-                            {% assign reversed_posts = site[collection.label] %}
-                        {% endif %}
 
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
+                {% if site.pages %}
+                    <li class="divider"></li>
+                    <li class="header">Trang</li>
+
+                    {% assign sorted_pages = site.pages | sort: 'date' %}
+
+                    {% for page_item in sorted_pages %}
+                        {% if page.url == page_item.url %}
+                            <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ page_item.url }}">
+                                <a href="#!">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i> {{ page_item.title | escape }}
                                 </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                                    {% endif %}
-                                {% endif %}
                             </li>
-                        {% endfor %}
-
-                        {% if reversed_posts.size > 0 %}
-                            <li class="divider"></li>
+                        {% else %}
+                            <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ page_item.url }}">
+                                <a href="{{ site.baseurl }}{{ page_item.url }}">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i> {{ page_item.title | escape }}
+                                </a>
+                            </li>
                         {% endif %}
-                    {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if site.others %}
+                    <li class="divider"></li>
+                    <li class="header">Khác</li>
+
+                    {% for other_item in site.others %}
+                        {% if page.url == other_item.url %}
+                            <li class="chapter active" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ other_item.url }}">
+                                <a href="#!">
+                                    <i class="fa fa-file" aria-hidden="true"></i> {{ other_item.title | escape }}
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="chapter" data-level="{{ forloop.index }}" data-path="{{ site.baseurl }}{{ other_item.url }}">
+                                <a href="{{ site.baseurl }}{{ other_item.url }}">
+                                    <i class="fa fa-file" aria-hidden="true"></i> {{ other_item.title | escape }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                <li class="divider"></li>
+                <li class="header">Liên kết hữu ích</li>
+                <li class="chapter">
+                    <a href="https://github.com/" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+                    </a>
+                </li>
+                <li class="chapter">
+                    <a href="https://www.gitbook.com/" target="_blank">
+                        <i class="fa fa-book" aria-hidden="true"></i> GitBook
+                    </a>
+                </li>
+                <li class="chapter">
+                    <a href="https://jekyllrb.com/" target="_blank">
+                        <i class="fa fa-code" aria-hidden="true"></i> Jekyll
+                    </a>
+                </li>
             {% endif %}
         </ul>
     </nav>
 </div>
+
+<style>
+    #sidebar-brand {
+        padding: 15px 15px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 10px;
+    }
+    
+    #sidebar-brand .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    
+    #sidebar-brand .brand-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    #sidebar-brand .brand-text {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--primary-color);
+    }
+    
+    .book-summary .summary li {
+        margin-bottom: 2px;
+    }
+    
+    .book-summary ul.summary li a i {
+        margin-right: 8px;
+        width: 16px;
+        text-align: center;
+        color: var(--text-light-color);
+    }
+    
+    .book-summary ul.summary li.active > a i {
+        color: var(--primary-color);
+    }
+</style>

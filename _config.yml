@@ -1,10 +1,10 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Tài liệu GitBook
+longtitle:        Tài liệu GitBook
+author:           Admin
+email:            example@example.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Trang tài liệu GitBook đẹp với thiết kế hiện đại.
 
 version:          1.0
 gitbook_version:  3.2.3
@@ -62,7 +62,7 @@ ordered_collections:
   - pages
   - others
 
-page_width: 800px
+page_width: 900px
 
 destination:      ./_site
 incremental:      false

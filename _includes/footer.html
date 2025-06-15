@@ -1,5 +1,5 @@
-<script src="{{site.baseurl}}/assets/gitbook/gitbook.js"></script>
-<script src="{{site.baseurl}}/assets/gitbook/theme.js"></script>
+<script src="{{ '/assets/gitbook/gitbook.js' | relative_url }}"></script>
+<script src="{{ '/assets/gitbook/theme.js' | relative_url }}"></script>
 
 <script src="{{site.baseurl}}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="{{site.baseurl}}/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
@@ -20,16 +20,94 @@
 <script src="{{site.baseurl}}/assets/gitbook/custom.js"></script>
 <script src="{{site.baseurl}}/assets/gitbook/custom-local.js"></script>
 
-{% if site.extra_footer_js %}
-    {%- for extra_js in site.extra_header_js -%}
-        {%- assign starts_with = extra_js | slice: 0,4  -%}
-        {% if starts_with == "http" %}
-<script src="{{ extra_js }}"></script>
-        {%- else -%}
-<script src="{{site.baseurl}}/{{ extra_js }}"></script>
-        {%- endif -%}
-    {%- endfor -%}
-{% endif %}
+{% for script in site.extra_footer_js %}
+<script src="{{ site.baseurl }}/{{ script }}"></script>
+{% endfor %}
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('{{ '/sw.js' | relative_url }}')
+      .then(function(reg){
+        console.log('Successfully registered service worker', reg);
+      }).catch(function(err){
+        console.warn('Error whilst registering service worker', err);
+      });
+  }
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>© {{ site.time | date: '%Y' }} {{ site.title }}. Tất cả quyền được bảo lưu.</p>
+        <p>Được tạo với <span class="heart">❤</span> bằng GitBook và Jekyll.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="#" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 40px 0;
+    background-color: var(--sidebar-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+  }
+  
+  .container {
+    max-width: var(--page-width, 900px);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-info {
+    color: var(--text-light-color);
+    font-size: 0.875rem;
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+  }
+  
+  .heart {
+    color: #ef4444;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    color: var(--text-light-color);
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+</style>
 
 {%- if site.tracker -%}
     <!-- trackers -->

@@ -2,11 +2,17 @@
 
 source "https://rubygems.org"
 
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-gem "jekyll"
-gem 'jekyll-feed'
-gem 'jekyll-readme-index'
-gem 'jemoji'
-gem 'webrick'
+gem "jekyll", "~> 4.3.2"
+gem "webrick", "~> 1.8"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-remote-theme"
+  gem "jekyll-readme-index"
+  gem "jemoji"
+end
 
 # gem "rails"

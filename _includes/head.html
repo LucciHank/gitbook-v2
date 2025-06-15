@@ -20,6 +20,11 @@
     <meta name="author" content="{{ site.author | escape }}">
 {%- endif -%}
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/style.css">
 <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
 <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
@@ -38,6 +43,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.baseurl}}/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
 <link rel="shortcut icon" href="{{site.baseurl}}/{{site.favicon_path}}" type="image/x-icon">
+
+<!-- Open Graph tags -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="vi_VN">
 
 {% if site.extra_css %}
     {%- for extra_css in site.extra_css -%}
