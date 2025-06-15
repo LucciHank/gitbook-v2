@@ -1,20 +1,38 @@
 # Configurations
-title:            Tài liệu GitBook
-longtitle:        Tài liệu GitBook
-author:           Admin
-email:            example@example.com
+title:            Tài liệu ToMoi
+longtitle:        Tài liệu ToMoi - Nền tảng học tập trực tuyến hàng đầu
+author:           ToMoi Team
+email:            support@tomoi.vn
 description: >
-  Trang tài liệu GitBook đẹp với thiết kế hiện đại.
+  Trang tài liệu chính thức của ToMoi với thiết kế hiện đại và thân thiện người dùng.
+  Hướng dẫn đầy đủ về cách sử dụng nền tảng học tập trực tuyến ToMoi.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://docs.tomoi.vn'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
 remote_theme: sighingnow/jekyll-gitbook
+
+# SEO settings
+lang: vi
+locale: vi_VN
+logo: /assets/gitbook/images/logo.png
+twitter:
+  username: tomoivn
+  card: summary_large_image
+facebook:
+  publisher: https://www.facebook.com/tomoivn
+social:
+  name: ToMoi
+  links:
+    - https://www.facebook.com/tomoivn
+    - https://twitter.com/tomoivn
+    - https://www.instagram.com/tomoivn
+    - https://www.youtube.com/tomoivn
 
 toc:
   enabled: true
@@ -41,13 +59,25 @@ syntax_highlighter_style: colorful
 markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:                /:categories/:year-:month-:day-:title:output_ext
+permalink:                /:title/
 
 # Disqus comments
 # disqushandler:            sighingnow
 
+# Google Analytics
+google_analytics:         UA-XXXXXXXX-X
+
+# Website verification
+webmaster_verifications:
+  google: YOUR_VERIFICATION_CODE
+  bing: YOUR_VERIFICATION_CODE
+
 exclude:
   - _drafts
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
 
 collections:
   pages:
@@ -71,4 +101,6 @@ regenerate:       true
 plugins:
   - jekyll-feed
   - jekyll-readme-index
+  - jekyll-seo-tag 
+  - jekyll-sitemap
   - jemoji

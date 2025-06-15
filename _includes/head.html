@@ -1,6 +1,8 @@
 <meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
+{% include meta.html %}
+
 {%- if page.title -%}
     <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
 {%- else -%}
@@ -83,3 +85,8 @@
     {%- endif -%}
 
 {%- endif -%}
+
+{% if site.google_analytics %}
+    <!-- Google Analytics -->
+    {% include google-analytics.html %}
+{% endif %}

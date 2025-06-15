@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'vi' }}">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include body.html %}
+    
+    <!-- Add structured data for the page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{{ site.url }}/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- Add breadcrumbs structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "{{ site.title }}",
+                "item": "{{ site.url }}"
+            }
+            {% if page.title %}
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{{ page.title }}",
+                "item": "{{ page.url | absolute_url }}"
+            }
+            {% endif %}
+        ]
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect y="0" width="1200" height="80" fill="#df2626"/>
+  <rect y="550" width="1200" height="80" fill="#df2626"/>
+  
+  <!-- Logo Circle -->
+  <circle cx="200" cy="315" r="100" fill="#df2626"/>
+  
+  <!-- ToMoi Text -->
+  <text x="350" y="300" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="#df2626">ToMoi</text>
+  <text x="350" y="380" font-family="Arial, sans-serif" font-size="60" font-weight="normal" fill="#333333">Tài liệu chính thức</text>
+  
+  <!-- Decorative Elements -->
+  <rect x="350" y="320" width="200" height="4" fill="#df2626"/>
+  <rect x="980" y="200" width="120" height="4" fill="#df2626"/>
+  <rect x="980" y="426" width="120" height="4" fill="#df2626"/>
+</svg> 

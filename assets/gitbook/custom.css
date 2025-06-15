@@ -252,12 +252,16 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     --c-tip-text: #215d42;
     --c-tip-title: #359469;
     --c-warning: #e7c000;
-    --c-warning-bg: rgba(255, 229, 100, .25);
+    --c-warning-bg: #fff8d8;
     --c-warning-text: #6b5900;
     --c-warning-title: #b29400;
-    --c-danger: #c00;
-    --c-danger-bg: #ffe0e0;
-    --c-danger-text: #600;
-    --c-danger-title: #c00;
+    --c-danger: #df2626;
+    --c-danger-bg: #ffebec;
+    --c-danger-text: #c61f1f;
+    --c-danger-title: #e13238;
+    --c-details-border: #aaa;
     --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
+
+/* Import custom-local.css at the end to override defaults */
+@import 'custom-local.css';

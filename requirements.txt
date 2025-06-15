@@ -1,0 +1,16 @@
+# Ruby Gems Required
+jekyll>=4.3.2
+webrick>=1.8.0
+csv>=3.3.5
+
+# Jekyll Plugins
+jekyll-feed
+jekyll-seo-tag
+jekyll-sitemap
+jekyll-paginate
+jekyll-remote-theme
+jekyll-readme-index
+jemoji
+
+# Note: This is for documentation purposes only.
+# For actual dependency management, please use the Gemfile. 

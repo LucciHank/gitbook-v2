@@ -1,14 +1,15 @@
-# Tài liệu GitBook
+# Tài liệu ToMoi
 
-Trang tài liệu GitBook đẹp với thiết kế hiện đại xây dựng bằng Jekyll.
+Trang tài liệu chính thức của ToMoi với thiết kế hiện đại xây dựng bằng Jekyll.
 
 ## Các tính năng
 
 - Thiết kế hiện đại, phản hồi nhanh
-- Giao diện giống GitBook
+- Giao diện giống GitBook với màu chủ đạo #df2626
 - Hỗ trợ Dark Mode
 - Tìm kiếm dễ dàng
 - Hỗ trợ SEO tích hợp
+- Tối ưu hóa cho các công cụ tìm kiếm
 - Đánh dấu trang và điều hướng
 - Dễ dàng tùy chỉnh
 
@@ -82,6 +83,42 @@ bundle exec jekyll serve
 
 4. Truy cập trang web tại địa chỉ: http://localhost:4000
 
+## Triển khai trên Netlify
+
+Dự án này được cấu hình để triển khai trên Netlify. Để triển khai:
+
+1. Đăng nhập vào [Netlify](https://www.netlify.com/)
+2. Nhấp vào "New site from Git"
+3. Chọn repository của bạn
+4. Cấu hình triển khai:
+   - Build command: `bundle exec jekyll build`
+   - Publish directory: `_site`
+5. Nhấp vào "Deploy site"
+
+Tệp `netlify.toml` đã được cấu hình với các thiết lập cần thiết.
+
+## Tối ưu SEO
+
+Trang web đã được tối ưu hóa cho SEO với các tính năng sau:
+
+- Thẻ meta đầy đủ cho từng trang
+- Schema.org structured data
+- Open Graph và Twitter Cards
+- Sitemap tự động
+- Robots.txt
+- Canonical URLs
+
+Để tùy chỉnh SEO cho từng trang, thêm front matter sau vào tệp Markdown:
+
+```yaml
+---
+title: Tiêu đề trang
+description: Mô tả ngắn về trang (dưới 160 ký tự)
+keywords: từ khóa, phân cách, bằng dấu phẩy
+image: /path/to/image.jpg
+---
+```
+
 ## Cấu trúc thư mục
 
 ```
@@ -97,6 +134,9 @@ bundle exec jekyll serve
 │       ├── custom.css           # CSS tùy chỉnh chính
 │       ├── custom-local.css     # CSS tùy chỉnh cục bộ
 │       └── images               # Hình ảnh
+├── netlify.toml                 # Cấu hình Netlify
+├── sitemap.xml                  # Sitemap
+├── robots.txt                   # Robots.txt
 └── README.md                    # Tệp này
 ```
 
@@ -118,9 +158,9 @@ Bạn có thể thay đổi màu sắc và các biến CSS trong file `assets/gi
 
 ```css
 :root {
-  --primary-color: #6366f1;  /* Màu chủ đạo */
-  --secondary-color: #4f46e5; /* Màu phụ */
-  --accent-color: #818cf8; /* Màu nhấn */
+  --primary-color: #df2626;  /* Màu chủ đạo */
+  --secondary-color: #c61f1f; /* Màu phụ */
+  --accent-color: #f85353; /* Màu nhấn */
   /* ... */
 }
 ```
@@ -135,6 +175,7 @@ title: Tiêu đề bài viết
 date: 2023-01-01
 categories: [category1, category2]
 tags: [tag1, tag2]
+description: Mô tả ngắn về bài viết
 ---
 
 Nội dung bài viết ở đây.
@@ -149,6 +190,7 @@ Nội dung bài viết ở đây.
 title: Tiêu đề trang
 layout: post
 permalink: /your-page-url/
+description: Mô tả ngắn về trang
 ---
 
 Nội dung trang ở đây.
