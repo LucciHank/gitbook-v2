@@ -1,97 +1,104 @@
+{% capture site_url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
+{% assign current_url = page.url | relative_url %}
 <div class="book-summary" id="sidebar">
     <div id="book-search-input" role="search">
-        <input type="text" placeholder="Tìm kiếm" />
+        <input type="text" placeholder="Tìm kiếm (Ctrl+K)" />
     </div>
 
-    <nav role="navigation">
-        <div id="sidebar-brand">
-            <a href="{{ site.baseurl }}/" class="logo">
-                <img src="{{ site.baseurl }}/assets/gitbook/images/logo.png" alt="Logo" class="brand-logo">
-                <span class="brand-text">{{ site.title }}</span>
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <a href="https://help.tomoi.vn" class="logo-link">
+                <img src="{{ site.baseurl }}/assets/images/logo.png" alt="TomOi Logo" class="sidebar-logo-img">
+                <div class="sidebar-badge">Help</div>
             </a>
-            <button id="sidebar-close" class="sidebar-toggle">
-                <i class="fa fa-times"></i>
-            </button>
         </div>
-        <ul class="summary">
-            <li class="divider"></li>
-            <li class="header">Hướng dẫn sử dụng tài liệu</li>
-            <li class="chapter{% if page.url == '/' %} active{% endif %}" data-path="{{ site.baseurl }}/">
-                <a href="{{ site.baseurl }}/">
-                    <i class="fa fa-book" aria-hidden="true"></i> Hướng dẫn nhanh
+    </div>
+    <ul class="summary">
+        <li class="header">Hướng dẫn sử dụng tài liệu</li>
+        <li class="chapter{% if page.url == '/' %} active{% endif %}" data-path="{{ site.baseurl }}/">
+            <a href="{{ site.baseurl }}/">
+                <i class="fa fa-book" aria-hidden="true"></i> Hướng dẫn nhanh
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="header">Giới thiệu</li>
+        <li class="chapter{% if page.url == '/gioi-thieu/gioi-thieu-ve-tomoivn/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/gioi-thieu-ve-tomoivn/">
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu về TomOi.vn
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/gioi-thieu/ly-do-mua-hang/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/ly-do-mua-hang/">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i> Lý do nên mua hàng tại TomOi.vn
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/gioi-thieu/nen-tang-chinh-thuc/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/nen-tang-chinh-thuc/">
+                <i class="fa fa-certificate" aria-hidden="true"></i> Các nền tảng chính thức
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/gioi-thieu/tong-quan-website/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/tong-quan-website/">
+                <i class="fa fa-desktop" aria-hidden="true"></i> Tổng quan website
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/gioi-thieu/dieu-khoan-dich-vu/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/dieu-khoan-dich-vu/">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> Điều khoản dịch vụ
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/gioi-thieu/chinh-sach-bao-mat/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/gioi-thieu/chinh-sach-bao-mat/">
+                <i class="fa fa-shield" aria-hidden="true"></i> Chính sách bảo mật
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="header">Hướng dẫn mua hàng</li>
+        <li class="chapter{% if page.url == '/huong-dan-mua-hang/quan-ly-tai-khoan/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/huong-dan-mua-hang/quan-ly-tai-khoan/">
+                <i class="fa fa-user" aria-hidden="true"></i> Quản lý tài khoản
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/huong-dan-mua-hang/tim-kiem-san-pham/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/huong-dan-mua-hang/tim-kiem-san-pham/">
+                <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm sản phẩm
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/huong-dan-mua-hang/gio-hang-va-thanh-toan/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/huong-dan-mua-hang/gio-hang-va-thanh-toan/">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng và thanh toán
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/huong-dan-mua-hang/theo-doi-don-hang/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/huong-dan-mua-hang/theo-doi-don-hang/">
+                <i class="fa fa-truck" aria-hidden="true"></i> Theo dõi đơn hàng
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="header">Thông tin bổ sung</li>
+        <li class="chapter{% if page.url == '/thong-tin-khac/cau-hoi-thuong-gap/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/thong-tin-khac/cau-hoi-thuong-gap/">
+                <i class="fa fa-question-circle" aria-hidden="true"></i> Câu hỏi thường gặp
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/thong-tin-khac/lien-he-ho-tro/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/thong-tin-khac/lien-he-ho-tro/">
+                <i class="fa fa-headphones" aria-hidden="true"></i> Liên hệ & Hỗ trợ
+            </a>
+        </li>
+        <li class="chapter{% if page.url == '/thong-tin-khac/thong-tin-phien-ban/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/thong-tin-khac/thong-tin-phien-ban/">
+                <i class="fa fa-history" aria-hidden="true"></i> Thông tin phiên bản
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="header">Hướng dẫn cài đặt và sử dụng</li>
+        <li class="chapter{% if page.url == '/huong-dan-cai-dat/' %} active{% endif %}">
+            <a href="{{ site.baseurl }}/huong-dan-cai-dat/">
+                <i class="fa fa-cog" aria-hidden="true"></i> Hướng dẫn cài đặt và sử dụng sản phẩm
                 </a>
-            </li>
-
-            <li class="divider"></li>
-            <li class="header">Giới thiệu</li>
-            <li class="chapter{% if page.url == '/gioi-thieu/gioi-thieu-ve-tomoivn/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/gioi-thieu-ve-tomoivn/">
-                    <i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu về TomOi.vn
-                            </a>
-                        </li>
-            <li class="chapter{% if page.url == '/gioi-thieu/ly-do-mua-hang/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/ly-do-mua-hang/">
-                    <i class="fa fa-check-circle" aria-hidden="true"></i> Lý do nên mua hàng tại TomOi.vn
-                            </a>
-                        </li>
-            <li class="chapter{% if page.url == '/gioi-thieu/nen-tang-chinh-thuc/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/nen-tang-chinh-thuc/">
-                    <i class="fa fa-globe" aria-hidden="true"></i> Các nền tảng chính thức
-                                </a>
-                            </li>
-            <li class="chapter{% if page.url == '/gioi-thieu/tong-quan-website/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/tong-quan-website/">
-                    <i class="fa fa-desktop" aria-hidden="true"></i> Tổng quan website
-                                </a>
-                            </li>
-            <li class="chapter{% if page.url == '/gioi-thieu/dieu-khoan-dich-vu/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/dieu-khoan-dich-vu/">
-                    <i class="fa fa-file-text" aria-hidden="true"></i> Điều khoản dịch vụ
-                                </a>
-                            </li>
-            <li class="chapter{% if page.url == '/gioi-thieu/chinh-sach-bao-mat/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/gioi-thieu/chinh-sach-bao-mat/">
-                    <i class="fa fa-shield" aria-hidden="true"></i> Chính sách bảo mật
-                                </a>
-                            </li>
-
-                <li class="divider"></li>
-            <li class="header">Hướng dẫn mua hàng</li>
-            <li class="chapter{% if page.url == '/huong-dan-mua-hang/quan-ly-tai-khoan/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-mua-hang/quan-ly-tai-khoan/">
-                    <i class="fa fa-user" aria-hidden="true"></i> Quản lý tài khoản
-                </a>
-            </li>
-            <li class="chapter{% if page.url == '/huong-dan-mua-hang/huong-dan-nap-tien/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-mua-hang/huong-dan-nap-tien/">
-                    <i class="fa fa-money" aria-hidden="true"></i> Hướng dẫn nạp tiền
-                </a>
-            </li>
-            <li class="chapter{% if page.url == '/huong-dan-mua-hang/huong-dan-thanh-toan/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-mua-hang/huong-dan-thanh-toan/">
-                    <i class="fa fa-credit-card" aria-hidden="true"></i> Hướng dẫn thanh toán
-                </a>
-            </li>
-            <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-nap-tien/">
-                    <i class="fa fa-history" aria-hidden="true"></i> Tra cứu lịch sử nạp tiền
-                    </a>
-                </li>
-            <li class="chapter{% if page.url == '/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-mua-hang/tra-cuu-lich-su-don-hang/">
-                    <i class="fa fa-list-alt" aria-hidden="true"></i> Tra cứu lịch sử đơn hàng
-                    </a>
-                </li>
-
-            <li class="divider"></li>
-            <li class="header">Hướng dẫn cài đặt và sử dụng</li>
-            <li class="chapter{% if page.url == '/huong-dan-cai-dat/' %} active{% endif %}">
-                <a href="{{ site.baseurl }}/huong-dan-cai-dat/">
-                    <i class="fa fa-cog" aria-hidden="true"></i> Hướng dẫn cài đặt và sử dụng sản phẩm
-                    </a>
-                </li>
-        </ul>
-    </nav>
+        </li>
+    </ul>
 </div>
 
 <!-- Mobile Navigation Toggle -->
@@ -112,6 +119,41 @@
 <div id="sidebar-overlay"></div>
 
 <style>
+    .sidebar-header {
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .sidebar-logo {
+        display: block;
+    }
+    
+    .logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none !important;
+    }
+    
+    .sidebar-logo-img {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+    
+    .sidebar-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        color: #fff;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+        cursor: default;
+    }
+    
     #sidebar-brand {
         padding: 15px 15px;
         display: flex;
@@ -253,10 +295,42 @@
             overflow-y: auto;
         }
     }
+    
+    /* Sub-menu styles */
+    .book-summary ul.summary li.has-sub-menu > a:after {
+        content: '\f105'; /* Font Awesome angle-right icon */
+        font-family: 'FontAwesome';
+        float: right;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .book-summary ul.summary li.has-sub-menu.active > a:after {
+        transform: rotate(90deg);
+    }
+    
+    .book-summary ul.summary li ul.sub-menu {
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+    }
+    
+    .book-summary ul.summary li.active ul.sub-menu {
+        display: block;
+    }
+    
+    .book-summary ul.summary li.has-sub-menu > a {
+        cursor: pointer;
+    }
+    
+    .book-summary ul.summary li ul.sub-menu li a {
+        padding: 6px 15px;
+        font-size: 0.9em;
+    }
 </style>
 
 <script>
-// Add this script to handle mobile navigation
+// Add this script to handle mobile navigation and submenu toggling
 document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -293,8 +367,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Toggle submenu when parent items are clicked
+    const subMenuParents = document.querySelectorAll('.has-sub-menu > a');
+    subMenuParents.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            // Only prevent default if we're actually clicking the parent item, not a child
+            if (e.target === item || item.contains(e.target)) {
+                e.preventDefault();
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            }
+        });
+    });
+    
     // Close sidebar when a menu item is clicked (on mobile)
-    const menuItems = document.querySelectorAll('.summary li a');
+    const menuItems = document.querySelectorAll('.summary li:not(.has-sub-menu) a');
     menuItems.forEach(function(item) {
         item.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
@@ -309,6 +396,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             closeSidebar();
+        }
+    });
+    
+    // Auto-expand submenu if any child is active
+    document.querySelectorAll('.has-sub-menu').forEach(function(menu) {
+        if (menu.querySelector('.active')) {
+            menu.classList.add('active');
         }
     });
 });

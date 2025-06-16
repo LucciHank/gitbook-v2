@@ -67,13 +67,6 @@ description: Tài liệu hướng dẫn sử dụng dịch vụ tại TomOi.vn
   </div>
 </div>
 
-<div class="navigation-buttons">
-  <a href="{{ site.baseurl }}/gioi-thieu/gioi-thieu-ve-tomoivn/" class="next-button">
-    <span class="button-text">Giới thiệu về TomOi.vn</span>
-    <i class="fa fa-arrow-right"></i>
-  </a>
-</div>
-
 <div class="last-updated">
   <p>Cập nhật lần cuối: {% assign date_format = site.minima.date_format | default: "%d/%m/%Y" %}{{ site.time | date: date_format }}</p>
 </div>

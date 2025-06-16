@@ -1,99 +1,188 @@
 ---
-title: Điều khoản dịch vụ
+title: Điều khoản dịch vụ | TomOi.vn
 layout: post
 permalink: /gioi-thieu/dieu-khoan-dich-vu/
-description: Điều khoản và điều kiện sử dụng dịch vụ TomOi.vn
+description: Chính sách hoàn tiền và các điều khoản sử dụng dịch vụ tại TomOi.vn
 ---
 
-# Điều khoản dịch vụ TomOi.vn
+# Điều khoản dịch vụ
 
-*Cập nhật lần cuối: 15/06/2025*
+<div class="toc">
+  <h2>Mục lục</h2>
+  <ul>
+    <li><a href="#chinh-sach-hoan-tien">1. Chính sách hoàn tiền</a></li>
+    <li><a href="#dieu-kien-hoan-tien">2. Điều kiện hoàn tiền</a></li>
+    <li><a href="#quy-trinh-hoan-tien">3. Quy trình hoàn tiền</a></li>
+    <li><a href="#thoi-gian-xu-ly">4. Thời gian xử lý</a></li>
+    <li><a href="#truong-hop-khong-duoc-hoan-tien">5. Trường hợp không được hoàn tiền</a></li>
+    <li><a href="#lien-he-ho-tro">6. Liên hệ hỗ trợ</a></li>
+  </ul>
+</div>
 
-## 1. Giới thiệu
+<section class="policy-section" id="chinh-sach-hoan-tien">
+  <h2>1. Chính sách hoàn tiền</h2>
+  <p>
+    TomOi.vn cam kết mang đến cho khách hàng trải nghiệm mua sắm hài lòng nhất. Chúng tôi hiểu rằng đôi khi có thể có những vấn đề phát sinh, vì vậy chúng tôi đã xây dựng chính sách hoàn tiền rõ ràng và công bằng.
+  </p>
+  <p>
+    Chính sách hoàn tiền này áp dụng cho tất cả các sản phẩm và dịch vụ được mua trực tiếp từ website TomOi.vn. Đối với các sản phẩm mua từ các đối tác hoặc đại lý của chúng tôi, vui lòng tham khảo chính sách hoàn tiền của họ.
+  </p>
+</section>
 
-Chào mừng bạn đến với TomOi.vn. Trước khi sử dụng dịch vụ của chúng tôi, vui lòng đọc kỹ các Điều khoản Dịch vụ này. Điều khoản này thiết lập các quyền, nghĩa vụ và giới hạn khi bạn sử dụng các sản phẩm và dịch vụ được cung cấp bởi TomOi.vn.
+<section class="policy-section" id="dieu-kien-hoan-tien">
+  <h2>2. Điều kiện hoàn tiền</h2>
+  <p>
+    Khách hàng có thể yêu cầu hoàn tiền trong các trường hợp sau:
+  </p>
+  <ul>
+    <li><strong>Sản phẩm bị lỗi:</strong> Sản phẩm không hoạt động như mô tả hoặc có lỗi kỹ thuật không thể khắc phục.</li>
+    <li><strong>Giao sai sản phẩm:</strong> Sản phẩm nhận được không đúng với sản phẩm đã đặt mua.</li>
+    <li><strong>Không hài lòng với sản phẩm:</strong> Trong vòng 7 ngày kể từ ngày mua, nếu khách hàng không hài lòng với sản phẩm.</li>
+    <li><strong>Thanh toán trùng lặp:</strong> Khách hàng vô tình thanh toán nhiều lần cho cùng một đơn hàng.</li>
+    <li><strong>Dịch vụ không được cung cấp:</strong> Dịch vụ đã thanh toán nhưng không được cung cấp theo thỏa thuận.</li>
+  </ul>
+</section>
 
-Bằng việc truy cập và sử dụng trang web TomOi.vn, ứng dụng di động hoặc bất kỳ dịch vụ nào được cung cấp bởi TomOi.vn (gọi chung là "Dịch vụ"), bạn đồng ý tuân thủ và bị ràng buộc bởi các Điều khoản này.
+<section class="policy-section" id="quy-trinh-hoan-tien">
+  <h2>3. Quy trình hoàn tiền</h2>
+  <p>
+    Để yêu cầu hoàn tiền, khách hàng vui lòng thực hiện theo các bước sau:
+  </p>
+  <ol>
+    <li>Đăng nhập vào tài khoản TomOi.vn của bạn.</li>
+    <li>Vào mục "Lịch sử đơn hàng" và chọn đơn hàng cần hoàn tiền.</li>
+    <li>Nhấp vào nút "Yêu cầu hoàn tiền" và điền vào mẫu yêu cầu.</li>
+    <li>Cung cấp lý do hoàn tiền và các thông tin cần thiết khác.</li>
+    <li>Gửi yêu cầu và chờ phản hồi từ đội ngũ hỗ trợ của chúng tôi.</li>
+  </ol>
+  <p>
+    Ngoài ra, khách hàng cũng có thể liên hệ trực tiếp với bộ phận Chăm sóc Khách hàng qua email <a href="mailto:support@tomoi.vn">support@tomoi.vn</a> hoặc hotline <strong>0562.147.786</strong> để được hỗ trợ.
+  </p>
+</section>
 
-## 2. Định nghĩa
+<section class="policy-section" id="thoi-gian-xu-ly">
+  <h2>4. Thời gian xử lý</h2>
+  <p>
+    Sau khi nhận được yêu cầu hoàn tiền hợp lệ, chúng tôi sẽ xử lý trong thời gian như sau:
+  </p>
+  <ul>
+    <li><strong>Xác nhận yêu cầu:</strong> Trong vòng 24-48 giờ làm việc.</li>
+    <li><strong>Kiểm tra và đánh giá:</strong> 1-3 ngày làm việc.</li>
+    <li><strong>Hoàn tiền:</strong> 3-10 ngày làm việc (tùy theo phương thức thanh toán ban đầu).</li>
+  </ul>
+  <p>
+    <strong>Lưu ý:</strong> Thời gian hoàn tiền có thể khác nhau tùy theo phương thức thanh toán:
+  </p>
+  <ul>
+    <li><strong>Thẻ tín dụng/ghi nợ:</strong> 5-10 ngày làm việc.</li>
+    <li><strong>Ví điện tử:</strong> 1-3 ngày làm việc.</li>
+    <li><strong>Chuyển khoản ngân hàng:</strong> 3-5 ngày làm việc.</li>
+    <li><strong>Số dư tài khoản TomOi.vn:</strong> Ngay lập tức sau khi yêu cầu được chấp thuận.</li>
+  </ul>
+</section>
 
-- **"TomOi.vn"** đề cập đến công ty, nhân viên, đối tác và đại lý của chúng tôi.
-- **"Người dùng"** hoặc **"Bạn"** đề cập đến bất kỳ cá nhân hoặc tổ chức nào truy cập và sử dụng Dịch vụ của chúng tôi.
-- **"Tài khoản Premium"** đề cập đến các tài khoản dịch vụ số có tính phí của bên thứ ba được cung cấp thông qua TomOi.vn.
-- **"Nội dung"** đề cập đến mọi thông tin, dữ liệu, văn bản, hình ảnh, video hoặc các tài liệu khác được hiển thị, xuất bản hoặc truyền tải thông qua Dịch vụ.
+<section class="policy-section" id="truong-hop-khong-duoc-hoan-tien">
+  <h2>5. Trường hợp không được hoàn tiền</h2>
+  <p>
+    TomOi.vn có quyền từ chối yêu cầu hoàn tiền trong các trường hợp sau:
+  </p>
+  <ul>
+    <li>Đã quá thời hạn 7 ngày kể từ ngày mua (đối với trường hợp không hài lòng với sản phẩm).</li>
+    <li>Sản phẩm đã được sử dụng hoặc kích hoạt (đối với các sản phẩm số như phần mềm, mã kích hoạt).</li>
+    <li>Khách hàng không tuân thủ hướng dẫn sử dụng sản phẩm, dẫn đến hư hỏng hoặc lỗi.</li>
+    <li>Sản phẩm được mua trong các chương trình khuyến mãi đặc biệt có điều khoản "Không hoàn tiền".</li>
+    <li>Khách hàng không cung cấp đủ thông tin hoặc bằng chứng cần thiết cho yêu cầu hoàn tiền.</li>
+    <li>Sản phẩm thuộc danh mục không được hoàn tiền (được ghi rõ trong mô tả sản phẩm).</li>
+  </ul>
+</section>
 
-## 3. Đăng ký tài khoản và sử dụng dịch vụ
+<section class="policy-section" id="lien-he-ho-tro">
+  <h2>6. Liên hệ hỗ trợ</h2>
+  <p>
+    Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ về chính sách hoàn tiền, vui lòng liên hệ với chúng tôi qua:
+  </p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:support@tomoi.vn">support@tomoi.vn</a></li>
+    <li><strong>Hotline:</strong> 0562.147.786 (8h-22h hàng ngày)</li>
+    <li><strong>Live Chat:</strong> Trên website <a href="https://tomoi.vn">tomoi.vn</a></li>
+    <li><strong>Văn phòng:</strong> 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</li>
+  </ul>
+  <p>
+    Chúng tôi cam kết xem xét và giải quyết mọi yêu cầu hoàn tiền một cách công bằng và minh bạch nhất có thể.
+  </p>
+</section>
 
-### 3.1 Đăng ký tài khoản
+<div class="last-updated">
+  Cập nhật lần cuối: 15/06/2025
+</div>
 
-- Bạn phải từ đủ 18 tuổi trở lên để đăng ký và sử dụng dịch vụ của TomOi.vn.
-- Bạn đồng ý cung cấp thông tin chính xác, đầy đủ và cập nhật trong quá trình đăng ký.
-- Bạn chịu trách nhiệm bảo mật tài khoản và mật khẩu của mình.
-- TomOi.vn có quyền từ chối cung cấp dịch vụ, đóng tài khoản, xóa hoặc chỉnh sửa nội dung mà không cần thông báo trước.
+<style>
+.toc {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
 
-### 3.2 Sử dụng tài khoản Premium
+.toc h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
 
-- Tài khoản Premium được cung cấp dựa trên cơ sở "nguyên trạng" và "có sẵn".
-- Tài khoản Premium là dịch vụ được cấp phép, không phải tài sản được bán. Bạn không sở hữu tài khoản, mà chỉ được cấp quyền sử dụng trong thời hạn đã mua.
-- Bạn không được phép chia sẻ, bán lại hoặc chuyển nhượng tài khoản Premium cho người khác trừ khi có sự cho phép rõ ràng từ TomOi.vn.
-- TomOi.vn không chịu trách nhiệm về nội dung được truy cập thông qua tài khoản Premium.
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 
-### 3.3 Giới hạn truy cập
+.toc ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
 
-Mỗi tài khoản Premium có thể có giới hạn số lượng thiết bị được phép đăng nhập đồng thời, tùy thuộc vào chính sách của dịch vụ đó. Bạn đồng ý không cố tình vượt qua giới hạn này.
+.toc ul li:before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
-## 4. Thanh toán và hoàn tiền
+.toc ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-### 4.1 Phí dịch vụ
+.toc ul li a:hover {
+  color: var(--primary-color);
+}
 
-- Giá dịch vụ được niêm yết trên trang web TomOi.vn tại thời điểm mua hàng.
-- TomOi.vn có quyền thay đổi giá dịch vụ vào bất kỳ lúc nào, nhưng sẽ không ảnh hưởng đến các đơn hàng đã thanh toán.
-- Bạn đồng ý thanh toán đầy đủ cho tất cả các dịch vụ bạn mua qua TomOi.vn.
+section {
+  margin-bottom: 40px;
+}
 
-### 4.2 Chính sách hoàn tiền
+section h2 {
+  font-size: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
 
-- TomOi.vn cung cấp chính sách hoàn tiền trong vòng 24 giờ đầu tiên sau khi mua nếu dịch vụ không hoạt động như mô tả.
-- Không hoàn tiền cho các trường hợp:
-  - Đã sử dụng dịch vụ quá 24 giờ
-  - Vi phạm điều khoản sử dụng của dịch vụ
-  - Yêu cầu hoàn tiền đối với tài khoản đã hết hạn
-  - Các trường hợp bất khả kháng ngoài tầm kiểm soát của TomOi.vn
+section ul, section ol {
+  padding-left: 20px;
+}
 
-## 5. Bảo hành dịch vụ
+section ul li, section ol li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
 
-### 5.1 Thời hạn bảo hành
-
-TomOi.vn cam kết bảo hành các tài khoản Premium trong suốt thời gian sử dụng như đã cam kết khi mua hàng, với điều kiện người dùng tuân thủ đúng các quy định sử dụng.
-
-### 5.2 Phạm vi bảo hành
-
-- Bảo hành chỉ áp dụng cho các vấn đề phát sinh từ phía nhà cung cấp dịch vụ, không áp dụng cho các vấn đề phát sinh do người dùng.
-- TomOi.vn sẽ hỗ trợ khắc phục hoặc thay thế tài khoản mới nếu tài khoản gặp sự cố không thể sử dụng trong thời gian bảo hành.
-
-## 6. Quyền sở hữu trí tuệ
-
-### 6.1 Nội dung của TomOi.vn
-
-Tất cả các nội dung hiển thị trên TomOi.vn bao gồm nhưng không giới hạn ở logo, hình ảnh, văn bản, thiết kế đều thuộc quyền sở hữu của TomOi.vn hoặc các đối tác cấp phép. Bạn không được sao chép, phân phối, sửa đổi hoặc sử dụng chúng mà không có sự cho phép rõ ràng.
-
-### 6.2 Nhãn hiệu của bên thứ ba
-
-Tất cả các nhãn hiệu, logo, tên sản phẩm và dịch vụ của các bên thứ ba được đề cập trên TomOi.vn đều thuộc về chủ sở hữu tương ứng.
-
-## 7. Giới hạn trách nhiệm
-
-### 7.1 Loại trừ bảo đảm
-
-TomOi.vn cung cấp dịch vụ "nguyên trạng" và "có sẵn" mà không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý.
-
-### 7.2 Giới hạn trách nhiệm pháp lý
-
-TomOi.vn không chịu trách nhiệm đối với bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên, đặc biệt hoặc do hậu quả nào phát sinh từ việc sử dụng hoặc không thể sử dụng dịch vụ của chúng tôi.
-
-## 8. Thay đổi điều khoản
-
-TomOi.vn có quyền sửa đổi, cập nhật hoặc thay đổi các Điều khoản này bất cứ lúc nào mà không cần thông báo trước. Việc bạn tiếp tục sử dụng Dịch vụ sau khi thay đổi được công bố đồng nghĩa với việc bạn chấp nhận các điều khoản mới.
-
-## 9. Liên hệ
-
-Nếu bạn có bất kỳ câu hỏi nào về Điều khoản Dịch vụ này, vui lòng liên hệ với chúng tôi qua email: [support@tomoi.vn](mailto:support@tomoi.vn) hoặc hotline: 0123.456.789. 
+.last-updated {
+  text-align: right;
+  font-style: italic;
+  color: var(--text-light-color);
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+</style> 

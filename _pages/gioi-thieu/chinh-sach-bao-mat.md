@@ -1,99 +1,205 @@
 ---
-title: Chính sách bảo mật
+title: Chính sách bảo mật | TomOi.vn
 layout: post
 permalink: /gioi-thieu/chinh-sach-bao-mat/
-description: Chính sách bảo mật thông tin cá nhân và dữ liệu người dùng tại TomOi.vn
+description: Chính sách bảo mật và bảo vệ thông tin người dùng tại TomOi.vn
 ---
 
-# Chính sách bảo mật TomOi.vn
+# Chính sách bảo mật
 
-*Cập nhật lần cuối: 15/06/2025*
+<div class="toc">
+  <h2>Mục lục</h2>
+  <ul>
+    <li><a href="#gioi-thieu">1. Giới thiệu</a></li>
+    <li><a href="#thu-thap-thong-tin">2. Thu thập thông tin</a></li>
+    <li><a href="#su-dung-thong-tin">3. Sử dụng thông tin</a></li>
+    <li><a href="#bao-mat-thong-tin">4. Bảo mật thông tin</a></li>
+    <li><a href="#quyen-cua-nguoi-dung">5. Quyền của người dùng</a></li>
+    <li><a href="#thay-doi-chinh-sach">6. Thay đổi chính sách</a></li>
+  </ul>
+</div>
 
-## 1. Giới thiệu
+<section class="policy-section" id="gioi-thieu">
+  <h2>1. Giới thiệu</h2>
+  <p>
+    TomOi.vn cam kết bảo vệ quyền riêng tư và thông tin cá nhân của khách hàng. Chính sách bảo mật này mô tả cách chúng tôi thu thập, sử dụng, bảo vệ và chia sẻ thông tin của bạn khi bạn truy cập hoặc sử dụng dịch vụ của TomOi.vn.
+  </p>
+  <p>
+    Bằng việc sử dụng dịch vụ của chúng tôi, bạn đồng ý với các điều khoản được nêu trong chính sách bảo mật này. Nếu bạn không đồng ý với chính sách của chúng tôi, vui lòng không sử dụng dịch vụ của TomOi.vn.
+  </p>
+</section>
 
-Tại TomOi.vn, chúng tôi coi trọng quyền riêng tư và bảo mật thông tin cá nhân của bạn. Chính sách Bảo mật này giải thích cách chúng tôi thu thập, sử dụng, tiết lộ, và bảo vệ thông tin cá nhân của bạn khi bạn truy cập hoặc sử dụng các dịch vụ của chúng tôi.
+<section class="policy-section" id="thu-thap-thong-tin">
+  <h2>2. Thu thập thông tin</h2>
+  <p>
+    TomOi.vn thu thập thông tin cá nhân của bạn khi:
+  </p>
+  <ul>
+    <li>Bạn đăng ký tài khoản trên TomOi.vn</li>
+    <li>Bạn thực hiện giao dịch mua hàng</li>
+    <li>Bạn liên hệ với bộ phận hỗ trợ khách hàng</li>
+    <li>Bạn tham gia các chương trình khuyến mãi hoặc khảo sát</li>
+    <li>Bạn truy cập và sử dụng website của chúng tôi</li>
+  </ul>
+  <p>
+    Thông tin chúng tôi thu thập có thể bao gồm:
+  </p>
+  <ul>
+    <li>Họ tên, địa chỉ email, số điện thoại</li>
+    <li>Thông tin thanh toán (không lưu trữ đầy đủ thông tin thẻ)</li>
+    <li>Lịch sử mua hàng và sử dụng dịch vụ</li>
+    <li>Thông tin thiết bị và trình duyệt khi bạn truy cập website</li>
+    <li>Dữ liệu về cách bạn tương tác với website của chúng tôi</li>
+  </ul>
+</section>
 
-Bằng việc sử dụng các dịch vụ của TomOi.vn, bạn đồng ý với các điều khoản của Chính sách Bảo mật này. Nếu bạn không đồng ý với Chính sách Bảo mật này, vui lòng không sử dụng dịch vụ của chúng tôi.
+<section class="policy-section" id="su-dung-thong-tin">
+  <h2>3. Sử dụng thông tin</h2>
+  <p>
+    Chúng tôi sử dụng thông tin thu thập được để:
+  </p>
+  <ul>
+    <li>Cung cấp, duy trì và cải thiện dịch vụ của chúng tôi</li>
+    <li>Xử lý giao dịch và gửi thông báo liên quan đến giao dịch</li>
+    <li>Cung cấp hỗ trợ khách hàng và phản hồi yêu cầu</li>
+    <li>Gửi thông tin cập nhật, thông báo kỹ thuật và thông báo bảo mật</li>
+    <li>Phát hiện, ngăn chặn và xử lý các hoạt động gian lận hoặc bất hợp pháp</li>
+    <li>Nghiên cứu và phân tích để cải thiện trải nghiệm người dùng</li>
+  </ul>
+</section>
 
-## 2. Thông tin chúng tôi thu thập
+<section class="policy-section" id="bao-mat-thong-tin">
+  <h2>4. Bảo mật thông tin</h2>
+  <p>
+    TomOi.vn áp dụng các biện pháp bảo mật hợp lý để bảo vệ thông tin cá nhân của bạn khỏi truy cập trái phép, sửa đổi, tiết lộ hoặc phá hủy. Các biện pháp này bao gồm:
+  </p>
+  <ul>
+    <li>Mã hóa dữ liệu nhạy cảm sử dụng công nghệ SSL</li>
+    <li>Hạn chế quyền truy cập vào thông tin cá nhân</li>
+    <li>Duy trì các biện pháp bảo mật vật lý, điện tử và quy trình</li>
+    <li>Thường xuyên đánh giá và cập nhật các biện pháp bảo mật</li>
+  </ul>
+  <p>
+    Tuy nhiên, không có phương thức truyền qua internet hoặc phương thức lưu trữ điện tử nào là an toàn 100%. Do đó, mặc dù chúng tôi nỗ lực bảo vệ thông tin cá nhân của bạn, chúng tôi không thể đảm bảo an ninh tuyệt đối.
+  </p>
+</section>
 
-### 2.1 Thông tin bạn cung cấp cho chúng tôi
+<section class="policy-section" id="quyen-cua-nguoi-dung">
+  <h2>5. Quyền của người dùng</h2>
+  <p>
+    Bạn có các quyền sau đối với thông tin cá nhân của mình:
+  </p>
+  <ul>
+    <li>Quyền truy cập và xem thông tin cá nhân mà chúng tôi lưu giữ về bạn</li>
+    <li>Quyền yêu cầu sửa đổi hoặc cập nhật thông tin không chính xác</li>
+    <li>Quyền yêu cầu xóa thông tin cá nhân trong một số trường hợp</li>
+    <li>Quyền phản đối hoặc hạn chế việc xử lý thông tin cá nhân</li>
+    <li>Quyền rút lại sự đồng ý đã cung cấp trước đó</li>
+  </ul>
+  <p>
+    Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi qua email: support@tomoi.vn
+  </p>
+</section>
 
-- **Thông tin tài khoản**: Họ tên, địa chỉ email, số điện thoại, ngày sinh khi bạn đăng ký tài khoản.
-- **Thông tin thanh toán**: Thông tin ngân hàng, thẻ tín dụng/ghi nợ, ví điện tử hoặc các thông tin thanh toán khác khi bạn mua hàng.
-- **Thông tin liên lạc**: Nội dung bạn gửi khi liên hệ với chúng tôi qua email, chat hoặc các kênh hỗ trợ khác.
+<section class="policy-section" id="thay-doi-chinh-sach">
+  <h2>6. Thay đổi chính sách</h2>
+  <p>
+    Chúng tôi có thể cập nhật Chính sách Bảo mật này theo thời gian để phản ánh những thay đổi về thực tiễn thông tin của chúng tôi hoặc vì các lý do hoạt động, pháp lý hoặc quy định khác.
+  </p>
+  <p>
+    Chúng tôi sẽ thông báo cho bạn về những thay đổi quan trọng bằng cách đăng thông báo rõ ràng trên trang web của chúng tôi hoặc bằng cách gửi email trực tiếp cho bạn.
+  </p>
+  <p>
+    Chúng tôi khuyến khích bạn xem xét định kỳ Chính sách Bảo mật này để biết cách chúng tôi bảo vệ thông tin của bạn.
+  </p>
+</section>
 
-### 2.2 Thông tin chúng tôi tự động thu thập
+<div class="last-updated">
+  Cập nhật lần cuối: 15/06/2025
+</div>
 
-- **Thông tin thiết bị**: Loại thiết bị, hệ điều hành, ID thiết bị duy nhất, địa chỉ IP.
-- **Thông tin sử dụng**: Cách bạn tương tác với trang web, thời gian truy cập, trang bạn xem, đường dẫn bạn nhấp vào.
-- **Thông tin vị trí**: Vị trí gần đúng thông qua địa chỉ IP của bạn.
-- **Cookie và công nghệ theo dõi**: Chúng tôi sử dụng cookie và các công nghệ theo dõi tương tự để ghi nhớ tùy chọn của bạn và cải thiện trải nghiệm người dùng.
+<style>
+.toc {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-## 3. Cách chúng tôi sử dụng thông tin
+.toc h2 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 
-Chúng tôi sử dụng thông tin thu thập được để:
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 
-- Cung cấp, duy trì và cải thiện dịch vụ của chúng tôi
-- Xử lý và hoàn thành các giao dịch mua hàng
-- Gửi thông tin cập nhật, xác nhận đơn hàng và hỗ trợ khách hàng
-- Gửi thông tin về các sản phẩm, dịch vụ và khuyến mãi mà bạn có thể quan tâm
-- Phát hiện, ngăn chặn và xử lý các hoạt động gian lận hoặc lạm dụng
-- Tuân thủ các nghĩa vụ pháp lý
-- Phân tích và hiểu cách người dùng tương tác với dịch vụ của chúng tôi
+.toc ul li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
 
-## 4. Chia sẻ thông tin
+.toc ul li:before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
 
-### 4.1 Chúng tôi có thể chia sẻ thông tin của bạn với:
+.toc ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
 
-- **Đối tác dịch vụ**: Các bên thứ ba giúp chúng tôi cung cấp dịch vụ, như xử lý thanh toán, phân tích dữ liệu, hỗ trợ khách hàng.
-- **Đối tác kinh doanh**: Khi cần thiết để cung cấp các sản phẩm hoặc dịch vụ được yêu cầu.
-- **Cơ quan thực thi pháp luật**: Khi được yêu cầu bởi luật pháp, lệnh toà án hoặc quy trình pháp lý.
+.toc ul li a:hover {
+  color: var(--primary-color);
+}
 
-### 4.2 Chúng tôi không bán thông tin cá nhân của bạn
+.policy-section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-TomOi.vn cam kết không bán, cho thuê hoặc trao đổi thông tin cá nhân của bạn với bất kỳ bên thứ ba nào cho mục đích tiếp thị của họ mà không có sự đồng ý rõ ràng của bạn.
+.policy-section h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(223, 38, 38, 0.2);
+  padding-bottom: 10px;
+}
 
-## 5. Bảo mật thông tin
+.policy-section ul {
+  padding-left: 20px;
+}
 
-Chúng tôi thực hiện các biện pháp bảo mật hợp lý để bảo vệ thông tin cá nhân của bạn khỏi mất mát, truy cập trái phép, sử dụng sai, tiết lộ, thay đổi và phá hủy, bao gồm:
+.policy-section ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
-- Mã hóa dữ liệu nhạy cảm sử dụng công nghệ SSL
-- Hạn chế quyền truy cập vào thông tin cá nhân dựa trên nhu cầu công việc
-- Thực hiện các biện pháp bảo mật vật lý tại các cơ sở lưu trữ dữ liệu
-- Kiểm tra và cập nhật thường xuyên các biện pháp bảo mật
+.policy-section p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
 
-## 6. Lưu trữ dữ liệu
-
-Chúng tôi sẽ lưu giữ thông tin cá nhân của bạn trong thời gian cần thiết để đáp ứng các mục đích được nêu trong Chính sách Bảo mật này, trừ khi luật pháp yêu cầu hoặc cho phép thời gian lưu trữ lâu hơn.
-
-## 7. Quyền của bạn
-
-Tùy thuộc vào luật pháp áp dụng, bạn có thể có quyền:
-
-- Truy cập vào thông tin cá nhân mà chúng tôi có về bạn
-- Chỉnh sửa hoặc cập nhật thông tin không chính xác
-- Hạn chế hoặc phản đối việc xử lý thông tin của bạn
-- Yêu cầu xóa thông tin cá nhân của bạn
-- Nhận thông tin của bạn ở định dạng có thể chuyển giao
-- Rút lại sự đồng ý của bạn khi việc xử lý dựa trên sự đồng ý
-
-Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi theo thông tin trong mục "Liên hệ" bên dưới.
-
-## 8. Bảo vệ trẻ em
-
-Dịch vụ của chúng tôi không hướng đến trẻ em dưới 18 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em dưới 18 tuổi. Nếu bạn biết rằng con bạn đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ với chúng tôi và chúng tôi sẽ thực hiện các bước để xóa thông tin đó khỏi hệ thống của chúng tôi.
-
-## 9. Thay đổi chính sách bảo mật
-
-Chúng tôi có thể cập nhật Chính sách Bảo mật này đôi khi để phản ánh các thay đổi về các thông lệ thông tin của chúng tôi. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi quan trọng nào bằng cách đăng thông báo nổi bật trên trang web của chúng tôi hoặc gửi email trực tiếp cho bạn. Chúng tôi khuyến khích bạn xem xét Chính sách Bảo mật này định kỳ để biết thông tin mới nhất về cách chúng tôi bảo vệ thông tin cá nhân của bạn.
-
-## 10. Liên hệ
-
-Nếu bạn có bất kỳ câu hỏi, mối quan tâm hoặc yêu cầu nào liên quan đến Chính sách Bảo mật này hoặc cách chúng tôi xử lý thông tin cá nhân của bạn, vui lòng liên hệ với chúng tôi qua:
-
-- Email: [privacy@tomoi.vn](mailto:privacy@tomoi.vn)
-- Địa chỉ: 123 Đường ABC, Quận XYZ, Thành phố Hồ Chí Minh, Việt Nam
-- Hotline: 0123.456.789
-
-Chúng tôi cam kết giải quyết bất kỳ thắc mắc hoặc lo ngại nào bạn có thể có về thông tin của bạn. 
+.last-updated {
+  text-align: right;
+  font-style: italic;
+  color: var(--text-light-color);
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+</style> 

@@ -1,0 +1,61 @@
+<div class="book-header" role="navigation">
+    {% if page.url != '/' %}
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+    </h1>
+    {% endif %}
+
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left js-toolbar-action" aria-label="Toggle Sidebar"><i class="fa fa-align-justify"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" class="btn pull-right js-toolbar-action" aria-label="Toggle Dark Mode"><i class="fa fa-moon-o"></i></a>
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}" class="btn pull-right" aria-label="GitHub"><i class="fa fa-github"></i></a>
+    {% endif %}
+</div>
+
+<div class="book-header-logo-container">
+    <a href="https://help.tomoi.vn">
+        <div class="book-header-logo">
+            <img src="{{ site.baseurl }}/assets/images/logo.png" alt="TomOi Logo">
+        </div>
+    </a>
+    <div class="book-header-badge">
+        <span>Help</span>
+    </div>
+</div>
+
+<style>
+.book-header-logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.book-header-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.book-header-logo img {
+    height: 100%;
+    width: auto;
+}
+
+.book-header-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    cursor: default;
+}
+</style> 

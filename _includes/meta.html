@@ -1,29 +1,73 @@
 <!-- Primary Meta Tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.longtitle }}{% endif %}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-<meta name="author" content="{{ site.author.name }}">
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}ToMoi, tài liệu, học trực tuyến, hướng dẫn, gitbook{% endif %}">
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.longtitle }}{% endif %}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/gitbook/images/social-share.jpg' | absolute_url }}{% endif %}">
-<meta property="og:locale" content="{{ site.locale | default: 'vi_VN' }}">
+{%- if page.title -%}
+    <title>{{ page.title | escape }}</title>
+{%- else -%}
+    <title>{{ site.title | escape }}</title>
+{%- endif -%}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="{{site.description}}">
+<meta name="generator" content="Jekyll (using style of GitBook)">
+<meta name="author" content="{{ site.author }}">
+
+{%- if site.google_analytics_token -%}
+    <meta name="google-analytics" content="{{ site.google_analytics_token }}">
+{%- endif -%}
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/style.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/rouge/{{ site.syntax_highlighter_style }}.css">
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/custom.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.baseurl }}/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+{% if page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+{% else %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+{% endif %}
+
+<!-- Add Open Graph meta tags for better social sharing -->
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.jpg">
 
-<!-- Twitter -->
+<!-- Twitter Card meta tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="{{ page.url | absolute_url }}">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.longtitle }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-<meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/gitbook/images/social-share.jpg' | absolute_url }}{% endif %}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.jpg">
 
-<!-- Canonical -->
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    /* Hide the duplicate title that appears at the top of pages */
+    .page-inner .markdown-section > h1:first-child {
+        display: none;
+    }
+    
+    /* Also hide the paragraph that might follow the first h1 if it's just a description */
+    .page-inner .markdown-section > h1:first-child + p {
+        display: none;
+    }
+</style>
 
 <!-- Language Alternates -->
 {% if page.alternates %}
@@ -61,4 +105,20 @@
     "@id": "{{ page.url | absolute_url }}"
   }
 }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fix for mobile sidebar close button
+    const closeButton = document.querySelector('.book-header .js-toolbar-action');
+    if (closeButton) {
+      closeButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.toggle('with-summary');
+      });
+    }
+    
+    // Existing code for search functionality
+    // ... existing code ...
+  });
 </script> 

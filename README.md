@@ -1,6 +1,6 @@
-# Tài liệu ToMoi
+# Tài liệu TomOi
 
-Trang tài liệu chính thức của ToMoi với thiết kế hiện đại xây dựng bằng Jekyll.
+Trang tài liệu chính thức của TomOi với thiết kế hiện đại xây dựng bằng Jekyll.
 
 ## Các tính năng
 

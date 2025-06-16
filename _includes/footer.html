@@ -37,78 +37,9 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <!-- About Company Column -->
-      <div class="footer-column">
-        <div class="footer-logo">
-          <img src="{{site.baseurl}}/assets/gitbook/images/logo.png" alt="{{ site.title }}" height="40">
-        </div>
-        <p class="footer-description">
-          TomOi.vn là nền tảng uy tín chuyên cung cấp các tài khoản Premium chất lượng cao từ năm 2018.
-        </p>
-        <div class="footer-social">
-          <a href="https://facebook.com/tomoi.vn" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="https://zalo.me/tomoi" title="Zalo" target="_blank"><i class="fa fa-comment"></i></a>
-          <a href="https://youtube.com/tomoi" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a>
-          <a href="mailto:support@tomoi.vn" title="Email"><i class="fa fa-envelope"></i></a>
-        </div>
-      </div>
-      
-      <!-- Useful Links Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Liên kết nhanh</h4>
-        <ul class="footer-links">
-          <li><a href="{{site.baseurl}}/">Trang chủ</a></li>
-          <li><a href="{{site.baseurl}}/gioi-thieu/gioi-thieu-ve-tomoivn/">Về chúng tôi</a></li>
-          <li><a href="{{site.baseurl}}/gioi-thieu/dieu-khoan-dich-vu/">Điều khoản</a></li>
-          <li><a href="{{site.baseurl}}/gioi-thieu/chinh-sach-bao-mat/">Chính sách</a></li>
-          <li><a href="https://tomoi.vn/contact">Liên hệ</a></li>
-        </ul>
-      </div>
-      
-      <!-- Services Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Dịch vụ nổi bật</h4>
-        <ul class="footer-links">
-          <li><a href="https://tomoi.vn/netflix">Netflix</a></li>
-          <li><a href="https://tomoi.vn/spotify">Spotify Premium</a></li>
-          <li><a href="https://tomoi.vn/youtube">YouTube Premium</a></li>
-          <li><a href="https://tomoi.vn/office">Microsoft Office</a></li>
-          <li><a href="https://tomoi.vn/adobe">Adobe Creative Cloud</a></li>
-        </ul>
-      </div>
-      
-      <!-- Contact Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Thông tin liên hệ</h4>
-        <ul class="footer-contact">
-          <li>
-            <i class="fa fa-map-marker"></i>
-            <span>123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</span>
-          </li>
-          <li>
-            <i class="fa fa-phone"></i>
-            <span>0123.456.789</span>
-          </li>
-          <li>
-            <i class="fa fa-envelope"></i>
-            <span>support@tomoi.vn</span>
-          </li>
-          <li>
-            <i class="fa fa-clock-o"></i>
-            <span>8:30 - 22:00 (Thứ 2 - Chủ nhật)</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
     <div class="footer-bottom">
-      <div class="payment-methods">
-        <span>Chấp nhận thanh toán:</span>
-        <img src="{{site.baseurl}}/assets/gitbook/images/payment-methods.svg" alt="Payment Methods" height="24">
-      </div>
       <p class="copyright">
-        © {{ site.time | date: '%Y' }} {{ site.title }}. Tất cả quyền được bảo lưu.
+        © 2025 TomOi.vn - Tài liệu hướng dẫn. Tất cả quyền được bảo lưu.
       </p>
     </div>
   </div>
@@ -118,8 +49,7 @@
   .footer {
     background-color: var(--sidebar-bg);
     border-top: 1px solid var(--border-color);
-    padding: 60px 0 30px;
-    margin-top: 60px;
+    padding: 30px 0;
     font-size: 0.9rem;
   }
   
@@ -129,132 +59,11 @@
     padding: 0 30px;
   }
   
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-  
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer-logo {
-    margin-bottom: 15px;
-  }
-  
-  .footer-description {
-    color: var(--text-light-color);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .footer-social {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: rgba(var(--primary-color-rgb, 99, 102, 241), 0.1);
-    color: var(--primary-color);
-    transition: all 0.3s ease;
-  }
-  
-  .footer-social a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-  }
-  
-  .footer-heading {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--text-color);
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  .footer-heading:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background-color: var(--primary-color);
-  }
-  
-  .footer-links, 
-  .footer-contact {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: var(--text-light-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    display: block;
-    position: relative;
-    padding-left: 15px;
-  }
-  
-  .footer-links a:before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-  }
-  
-  .footer-links a:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-    transform: translateX(3px);
-  }
-  
-  .footer-contact li {
-    display: flex;
-    margin-bottom: 15px;
-    color: var(--text-light-color);
-  }
-  
-  .footer-contact i {
-    color: var(--primary-color);
-    margin-right: 10px;
-    width: 16px;
-    text-align: center;
-  }
-  
   .footer-bottom {
-    padding-top: 20px;
-    border-top: 1px solid rgba(var(--border-color-rgb, 229, 231, 235), 0.5);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-  }
-  
-  .payment-methods {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    color: var(--text-light-color);
   }
   
   .copyright {
@@ -262,85 +71,6 @@
     margin: 0;
     font-size: 0.85rem;
     line-height: 1.6;
-  }
-  
-  .heart {
-    color: #ef4444;
-    animation: heartbeat 1.2s infinite;
-    display: inline-block;
-  }
-  
-  @keyframes heartbeat {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.1); }
-    40% { transform: scale(1); }
-    60% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-  
-  .powered-by {
-    display: block;
-    margin-top: 5px;
-  }
-  
-  /* Responsive styles for mobile devices */
-  @media (max-width: 992px) {
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      padding: 40px 0 20px;
-    }
-    
-    .container {
-      padding: 0 20px;
-    }
-    
-    .footer-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    
-    .footer-bottom {
-      flex-direction: column;
-    }
-    
-    .payment-methods {
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
-    
-    .footer-description {
-      margin-bottom: 15px;
-    }
-    
-    .footer-column {
-      text-align: center;
-    }
-    
-    .footer-heading:after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    .footer-links a {
-      padding-left: 0;
-    }
-    
-    .footer-links a:before {
-      content: none;
-    }
-    
-    .footer-contact li {
-      justify-content: center;
-    }
-    
-    .footer-social {
-      justify-content: center;
-    }
   }
 </style>
 
